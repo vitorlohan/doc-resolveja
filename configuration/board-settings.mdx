@@ -1,0 +1,173 @@
+---
+title: "Customize Your Resolve Kanban Board Settings"
+sidebarTitle: "Board Settings"
+description: "Configure columns, categories, and display options on your Resolve Kanban board to match your team's infrastructure workflow."
+---
+
+Board settings give you precise control over how your team's Kanban board looks and behaves. From defining the status columns that represent your workflow stages, to deciding exactly what information appears on each ticket card, these settings let you shape Resolve around the way your infrastructure team actually works — not the other way around.
+
+## Column Configuration
+
+Columns represent the stages of your ticket workflow. By default, Resolve includes **Open**, **In Progress**, **Pending**, and **Done** columns, but you can add, rename, reorder, or remove any column to reflect your team's process.
+
+<Note>
+  Only **Admins** can add, remove, or rename columns. Members can reorder cards within columns but cannot modify column structure.
+</Note>
+
+<Steps>
+  <Step title="Open Board Settings">
+    From your Kanban board, click the **Settings** icon in the top-right corner, then select **Columns**.
+  </Step>
+  <Step title="Add a new column">
+    Click **+ Add Column**, enter a name (e.g., "Awaiting Approval"), and press **Enter** to save.
+  </Step>
+  <Step title="Rename a column">
+    Hover over any existing column header and click the **pencil icon** that appears. Type the new name and press **Enter**.
+  </Step>
+  <Step title="Reorder columns">
+    Drag and drop column headers left or right to change their order on the board. Your changes are saved automatically.
+  </Step>
+  <Step title="Remove a column">
+    Hover over the column header and click the **trash icon**. Any tickets in that column will be moved to **Open** before the column is deleted.
+  </Step>
+</Steps>
+
+## Category Management
+
+Categories let you classify tickets by the type of infrastructure they involve, making it easier to filter, route, and report on work. Resolve ships with a set of default categories, but you can create and manage your own.
+
+**Default categories include:** Network, Server, Database, Security, Storage, and Application.
+
+<Steps>
+  <Step title="Open Category Settings">
+    Go to **Settings → Board Settings → Categories**.
+  </Step>
+  <Step title="Create a new category">
+    Click **+ Add Category**, enter a name and choose a color label, then click **Save**.
+  </Step>
+  <Step title="Edit an existing category">
+    Click the **pencil icon** next to any category to update its name or color.
+  </Step>
+  <Step title="Delete a category">
+    Click the **trash icon** next to a category. Tickets assigned to that category will become uncategorized — you can reassign them in bulk from the ticket list view.
+  </Step>
+</Steps>
+
+<Note>
+  Deleting a category does not delete the tickets within it. All affected tickets remain on the board and can be recategorized at any time.
+</Note>
+
+## Default Board View Settings
+
+You can control how the board appears when a team member first loads it, including the default filter and the default sort order applied to cards within each column.
+
+| Setting | Options |
+|---|---|
+| **Default Filter** | All Tickets, My Tickets, Unassigned |
+| **Default Sort Order** | Priority (High → Low), Created Date (Newest first), Due Date (Soonest first), Alphabetical |
+| **Default View** | Kanban Board, List View |
+
+<Steps>
+  <Step title="Open View Settings">
+    Navigate to **Settings → Board Settings → Default View**.
+  </Step>
+  <Step title="Choose your defaults">
+    Select your preferred filter, sort order, and view from the dropdowns.
+  </Step>
+  <Step title="Save">
+    Click **Save Defaults**. These settings apply board-wide for all users who haven't set personal view preferences.
+  </Step>
+</Steps>
+
+<Note>
+  Individual users can override default view settings from their personal preferences. Board-wide defaults apply only when no personal preference has been set.
+</Note>
+
+## Card Display Options
+
+You can choose what information is shown directly on Kanban cards so your team sees what matters most at a glance — without having to open each ticket individually.
+
+Toggle the following fields on or off from **Settings → Board Settings → Card Display**:
+
+- **Assignee avatar** — Shows the profile picture of the assigned user
+- **Priority badge** — Displays a color-coded priority indicator (Critical, High, Medium, Low)
+- **Category label** — Shows the ticket's category tag
+- **Due date** — Displays the due date, highlighted in red if overdue
+- **Ticket ID** — Shows the unique ticket reference number
+- **Comment count** — Indicates how many comments a ticket has
+- **Attachment indicator** — Shows a paperclip icon when files are attached
+
+<Tip>
+  For large boards with many active tickets, displaying fewer fields per card reduces visual clutter and makes the board easier to scan. Consider showing only Priority and Assignee for day-to-day use.
+</Tip>
+
+## Swimlane Configuration
+
+Swimlanes divide your Kanban board into horizontal rows, grouping cards by a shared attribute. This is especially useful for large teams managing tickets across multiple systems or priority levels simultaneously.
+
+You can configure swimlanes to group cards by:
+
+- **Category** (e.g., a row for Network tickets, a row for Server tickets)
+- **Priority** (e.g., Critical tickets in one lane, High in another)
+- **Assignee** (e.g., each team member's tickets in their own row)
+- **None** (default — no swimlanes, all tickets flow freely within columns)
+
+<Steps>
+  <Step title="Open Swimlane Settings">
+    Go to **Settings → Board Settings → Swimlanes**.
+  </Step>
+  <Step title="Select a grouping option">
+    Choose **Category**, **Priority**, **Assignee**, or **None** from the **Group By** dropdown.
+  </Step>
+  <Step title="Customize lane order (optional)">
+    If grouping by Category or Priority, drag the swimlane rows to set the display order.
+  </Step>
+  <Step title="Save">
+    Click **Apply** to update the board layout immediately.
+  </Step>
+</Steps>
+
+## Archiving Completed Tickets
+
+To keep your board focused on active work, Resolve can automatically archive tickets once they reach a completed state. Archived tickets are hidden from the main board but remain fully searchable and accessible from the **Archive** view.
+
+<Steps>
+  <Step title="Open Archive Settings">
+    Navigate to **Settings → Board Settings → Auto-Archive**.
+  </Step>
+  <Step title="Enable auto-archive">
+    Toggle **Auto-Archive** on.
+  </Step>
+  <Step title="Set the trigger column">
+    Choose which column triggers archiving (typically **Done** or **Closed**).
+  </Step>
+  <Step title="Set the delay">
+    Enter the number of days a ticket must remain in the trigger column before being archived. The default is **7 days**.
+  </Step>
+  <Step title="Save">
+    Click **Save Settings**. Tickets matching the criteria will be archived during the next nightly processing window.
+  </Step>
+</Steps>
+
+<Tip>
+  You can manually archive any individual ticket by opening it and selecting **Archive** from the action menu — no need to wait for the auto-archive timer.
+</Tip>
+
+## Who Can Change Board Settings
+
+Resolve uses role-based access to protect board configuration from unintended changes.
+
+| Setting Area | Admin | Member | Viewer |
+|---|---|---|---|
+| Add / remove columns | ✅ | ❌ | ❌ |
+| Rename columns | ✅ | ❌ | ❌ |
+| Manage categories | ✅ | ❌ | ❌ |
+| Set default view | ✅ | ❌ | ❌ |
+| Toggle card display fields | ✅ | ❌ | ❌ |
+| Configure swimlanes | ✅ | ❌ | ❌ |
+| Configure auto-archive | ✅ | ❌ | ❌ |
+| Reorder cards within columns | ✅ | ✅ | ❌ |
+
+<Note>
+  If you need a setting changed and don't have Admin access, contact your Resolve administrator. Admins are listed under **Settings → Team → Members**.
+</Note>

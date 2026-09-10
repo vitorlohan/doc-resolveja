@@ -1,0 +1,135 @@
+---
+title: "Run Effective Workflows with the Kanban Board"
+sidebarTitle: "Kanban Workflows"
+description: "Use the Resolve Kanban board to visualize ticket flow, manage team workload, and run efficient infrastructure operations workflows."
+---
+
+A well-run Kanban board doesn't just show you what's happening — it tells you where things are stuck, who is overloaded, and what needs attention before it becomes an emergency. Resolve's Kanban board is designed around the rhythms of infrastructure teams: fast-moving incidents, long-running maintenance tasks, and everything in between. Understanding how to use it effectively makes the difference between a chaotic backlog and a team that consistently ships reliable infrastructure.
+
+## The Standard Workflow
+
+Every ticket in Resolve follows a four-stage lifecycle on the Kanban board. Each column represents a distinct state of work.
+
+<CardGroup cols={4}>
+  <Card title="To Do" icon="inbox">
+    Tickets that are filed and ready to be picked up. Work hasn't started yet. This is your team's prioritized backlog.
+  </Card>
+  <Card title="In Progress" icon="spinner">
+    Tickets actively being worked on right now. An assignee is engaged and work is underway.
+  </Card>
+  <Card title="In Review" icon="magnifying-glass">
+    Work is done but awaiting verification — peer review, testing, a change window, or sign-off from another team.
+  </Card>
+  <Card title="Done" icon="circle-check">
+    Tickets that have been resolved or closed. Done tickets are still visible on the board for the current session and roll off after 24 hours.
+  </Card>
+</CardGroup>
+
+Moving a ticket through these stages is how your team communicates progress without a meeting. Anyone glancing at the board can see the current state of all active work in seconds.
+
+## Moving Tickets via Drag-and-Drop
+
+The fastest way to update a ticket's status is to drag it from one column to another directly on the board.
+
+<Steps>
+  <Step title="Find your ticket on the board">
+    Scroll through the column where your ticket currently lives, or use the **Filter** bar to narrow the board to just your tickets so the card is easier to spot.
+  </Step>
+  <Step title="Grab the ticket card">
+    Click and hold on the ticket card. The card lifts and the board highlights valid drop targets.
+  </Step>
+  <Step title="Drop it in the destination column">
+    Drag to the target column and release. The status updates immediately and the change is logged in the ticket's Activity Log with a timestamp. Other team members see the move in real time without refreshing.
+  </Step>
+</Steps>
+
+<Tip>
+  You can also move a ticket by opening it and changing the **Status** dropdown in the detail panel — useful when you want to leave a comment explaining the status change at the same time.
+</Tip>
+
+## Filtering the Board
+
+With many tickets in flight, filtering the board down to what's relevant to you is essential. Use the filter bar above the board columns to focus your view.
+
+| Filter | What it shows |
+|---|---|
+| **Assignee** | Tickets assigned to one or more specific team members |
+| **Priority** | Only Critical, High, Medium, or Low tickets — combine multiple |
+| **Category** | Network, Server, Database, Application, Facilities, or Other |
+| **Tag** | Any ticket carrying a specific tag |
+| **Due Date** | Tickets due within a selected date range |
+
+Filters stack — selecting **Priority: Critical** and **Assignee: Me** shows only your Critical tickets. Active filters persist for your session so the board stays focused as you navigate away and return.
+
+<Tip>
+  Before a deployment or maintenance window, filter the board to the relevant **Category** and **Tag** to see all in-flight work related to that change. It's a fast way to confirm nothing is being modified in parallel.
+</Tip>
+
+## Board Views
+
+Resolve offers three built-in board views to match different use cases. Switch between them using the view selector in the top-left of the board.
+
+<CardGroup cols={3}>
+  <Card title="All Tickets" icon="table-columns">
+    Every active ticket your team has, organized by status column. Best for team-wide standups and understanding total workload.
+  </Card>
+  <Card title="My Tickets" icon="user">
+    Only tickets assigned to you. Your personal task board — start here each morning to see exactly what you own.
+  </Card>
+  <Card title="By Category" icon="layer-group">
+    The board is subdivided by infrastructure category. Each category has its own swim lane. Best for understanding work distribution across domains.
+  </Card>
+</CardGroup>
+
+## Spotting Bottlenecks
+
+The Kanban board makes systemic problems visible without any analysis — you just have to know what to look for.
+
+**A column with significantly more cards than others** is a bottleneck signal. Common patterns and what they mean:
+
+- **Too many cards in To Do** — The team is taking on more than it can start. Either stop adding tickets until capacity frees up, or explicitly deprioritize and remove tickets that aren't truly necessary.
+- **Too many cards in In Progress** — Team members are context-switching across too many tasks simultaneously. Encourage everyone to finish before starting new work. Each person should ideally own no more than two or three In Progress tickets at a time.
+- **Too many cards in In Review** — Review or sign-off is the constraint. Consider whether review steps can be parallelized, delegated, or streamlined for lower-risk tickets.
+
+<Tip>
+  Set a **WIP limit** (work-in-progress limit) as a team norm — for example, no single person holds more than three In Progress tickets simultaneously. Post the norm in your team's channel and use the **My Tickets** view to enforce it.
+</Tip>
+
+## Managing Priorities When Everything is Critical
+
+In a real incident, everything can feel urgent at once. When your board is flooded with high-priority tickets, use these steps to re-establish order.
+
+<Steps>
+  <Step title="Pull up the All Tickets view filtered by Critical and High">
+    This gives you the true scope of urgent work in one view.
+  </Step>
+  <Step title="Identify what has a real business impact right now">
+    Not every Critical ticket is equally critical in the same moment. Ask: is this affecting customers or revenue right now? Is this blocking another team? Apply honest priority downgrades where appropriate.
+  </Step>
+  <Step title="Assign one owner per ticket">
+    Diffuse ownership means nothing gets done. Every Critical and High ticket needs a named human being responsible for its progress.
+  </Step>
+  <Step title="Sequence, don't parallelize everything">
+    If one fix unblocks three others, do that one first. Note dependencies in ticket comments so the sequence is visible to everyone.
+  </Step>
+  <Step title="Create a parent ticket for major incidents">
+    For multi-ticket incidents, open a single coordination ticket (tagged `incident`) and link sub-tickets to it in the description. Use that ticket as the communication hub.
+  </Step>
+</Steps>
+
+<Tip>
+  Use the **By Category** board view when priority inflation hits. Seeing all Network tickets together — or all Database tickets together — helps you spot which domain is truly on fire and which just has stale high-priority tickets that never got downgraded.
+</Tip>
+
+## Daily Standup with the Kanban Board
+
+The Kanban board is your standup agenda. Pull it up on a shared screen and walk through it as a team using this structure:
+
+1. **Start with In Review** — these tickets are closest to done. Is there anything blocking them from moving to Done today?
+2. **Move to In Progress** — is each ticket still actively being worked? Any blockers that need team help?
+3. **Glance at To Do** — are the right tickets at the top? Does anyone have capacity to pull something new?
+4. **Note any new Critical or High tickets** that appeared since yesterday's standup.
+
+<Tip>
+  Keep standups board-focused rather than person-focused. "What is this ticket waiting on?" is a more productive question than "what did you do yesterday?" The board already answers the second question.
+</Tip>

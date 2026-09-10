@@ -1,0 +1,114 @@
+---
+title: "Automatic Notifications in Resolve"
+sidebarTitle: "Notifications"
+description: "Resolve automatically notifies the right people when tickets are created, updated, assigned, or reach critical status — keeping your team in sync."
+---
+
+Resolve's notification system keeps your team informed without requiring anyone to manually follow up or chase status updates. When something important happens to a ticket — it's assigned to you, a comment is posted, or a deadline is approaching — Resolve delivers a notification to the right people automatically. This means less context-switching, faster response times, and no critical updates slipping through the cracks.
+
+## Notification Triggers
+
+Resolve sends notifications based on specific events in the ticket lifecycle. Each trigger targets the people who are most relevant to that event, so you receive updates that are actually actionable for you.
+
+<CardGroup cols={2}>
+  <Card title="Ticket Created" icon="circle-plus">
+    Sent to the team lead or on-call assignee when a new ticket is opened in a category they own.
+  </Card>
+  <Card title="Ticket Assigned" icon="user-check">
+    Sent to the assignee the moment a ticket is assigned or reassigned to them.
+  </Card>
+  <Card title="Status Changed" icon="arrow-right-arrow-left">
+    Sent to the reporter and watchers whenever a ticket moves to a new status column.
+  </Card>
+  <Card title="Comment Added" icon="message-circle">
+    Sent to the assignee, reporter, and any `@mentioned` users when a new comment is posted.
+  </Card>
+  <Card title="Due Date Approaching" icon="clock">
+    Sent to the assignee 24 hours before a ticket's due date if it has not yet reached **Done**.
+  </Card>
+  <Card title="Ticket Overdue" icon="triangle-alert">
+    Sent to the assignee and their team lead when a ticket passes its due date without resolution.
+  </Card>
+  <Card title="Ticket Resolved" icon="circle-check">
+    Sent to the reporter when the ticket moves to **Done**, confirming the issue has been addressed.
+  </Card>
+  <Card title="Critical Priority Set" icon="siren">
+    Sent immediately to the assignee and on-call contact when a ticket's priority is set or escalated to **Critical**.
+  </Card>
+</CardGroup>
+
+<Warning>
+  **Critical and overdue tickets generate escalating notifications.** If a Critical ticket remains in **To Do** or **In Progress** for more than 30 minutes without activity, Resolve sends a follow-up notification to the assignee's team lead. After 60 minutes, it escalates to the on-call contact defined in **Settings → On-Call**. Make sure your on-call schedule is kept up to date to ensure the right people are reached.
+</Warning>
+
+---
+
+## Notification Channels
+
+Resolve delivers notifications through two channels. You can use one or both, depending on how your team works.
+
+<CardGroup cols={2}>
+  <Card title="In-App Notifications" icon="bell">
+    Notifications appear in the bell icon in the top navigation bar. A badge count shows how many unread notifications you have. Clicking a notification takes you directly to the relevant ticket. All in-app notifications are retained for 90 days.
+  </Card>
+  <Card title="Email Notifications" icon="mail">
+    Resolve sends notification emails to the address associated with your account. Each email includes the ticket title, a summary of what changed, and a direct link to open the ticket in Resolve. Email notifications can be turned off per-trigger in your preferences.
+  </Card>
+</CardGroup>
+
+---
+
+## Your Personal Notification Preferences
+
+You control which notification events trigger emails for you. In-app notifications are always delivered and cannot be disabled — they ensure you always have a complete record of activity on tickets you're involved in.
+
+<Steps>
+  <Step title="Open your preferences">
+    Click your avatar in the top-right corner of Resolve and select **Notification Preferences** from the dropdown menu.
+  </Step>
+  <Step title="Review the trigger list">
+    You'll see a list of every notification trigger. Each row shows the trigger name, who it is sent to, and a toggle to enable or disable email delivery for that trigger.
+  </Step>
+  <Step title="Toggle email delivery">
+    Turn off email for any triggers that aren't useful for you. For example, if you prefer to catch status changes in-app during your shift, you can disable the **Status Changed** email without losing the in-app notification.
+  </Step>
+  <Step title="Save your preferences">
+    Click **Save Preferences**. Your settings take effect immediately for all future notifications.
+  </Step>
+</Steps>
+
+<Accordion title="Which notification triggers can I disable?">
+  You can disable email delivery for any trigger **except** Critical Priority and Overdue escalations. Those notifications are mandatory and cannot be turned off to ensure that severe incidents always reach the responsible party. If you believe you are receiving escalation notifications in error, contact your administrator to review your team assignment and on-call schedule.
+</Accordion>
+
+---
+
+## Org-Wide Notification Defaults (Admins)
+
+If you are a Resolve administrator, you can configure the default notification settings that apply to all new users when they join your organization. Individual users can override these defaults in their own preferences, but the org-wide defaults ensure a sensible baseline from day one.
+
+<Steps>
+  <Step title="Navigate to admin settings">
+    Go to **Settings → Notifications** in the admin panel. You must have the **Admin** role to access this section.
+  </Step>
+  <Step title="Set default channel preferences">
+    For each trigger, choose whether new users default to receiving in-app only, email only, or both. These settings apply to all users who have not yet customized their own preferences.
+  </Step>
+  <Step title="Configure category-based routing">
+    Assign default notification recipients for each ticket category. For example, route all new **Database** tickets to the database team's distribution list, and all **Facilities** tickets to the facilities manager.
+  </Step>
+  <Step title="Set escalation targets">
+    Define who receives escalation notifications for Critical and overdue tickets. You can set a specific user, a team, or an on-call rotation as the escalation target for each category.
+  </Step>
+  <Step title="Save and apply">
+    Click **Save Defaults**. Changes apply immediately to all users who have not customized their own preferences. Existing customizations are not overwritten.
+  </Step>
+</Steps>
+
+<Warning>
+  Changing the escalation target for a category affects all future escalations immediately. If you are rotating on-call responsibilities, update the escalation target **before** the new rotation begins to avoid notifications going to the wrong person during an incident.
+</Warning>
+
+<Accordion title="Can I send notifications to external tools like Slack or PagerDuty?">
+  Integrations with external tools such as Slack, PagerDuty, and webhook endpoints are configured under **Settings → Integrations**, not in the Notifications panel. Once an integration is connected, you can map specific Resolve notification triggers to channels or services in the integration's configuration screen. See the Integrations documentation for setup instructions.
+</Accordion>

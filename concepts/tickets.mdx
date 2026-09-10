@@ -1,0 +1,122 @@
+---
+title: "Understanding Tickets in Resolve"
+sidebarTitle: "Tickets"
+description: "Learn how tickets work in Resolve — from creation and assignment to priority levels, categories, statuses, and resolution."
+---
+
+A ticket is the fundamental unit of work in Resolve. Every infrastructure issue, maintenance request, or operational task begins as a ticket — a structured record that captures what needs to be done, who is responsible, and how urgent it is. Tickets move through a defined lifecycle on the Kanban board, giving your entire team a shared, real-time view of what's happening across your infrastructure.
+
+## Ticket Anatomy
+
+Each ticket is composed of a set of core fields. Understanding what each field means helps your team create clear, actionable tickets that are easy to triage and resolve.
+
+### Title and Description
+
+The **title** is a short, scannable summary of the issue — aim for something specific enough that anyone on the team can understand the problem at a glance (e.g., "Database replica lag exceeding 30s on prod-db-02" rather than "DB issue").
+
+The **description** gives the full picture. Use it to document:
+- What is happening and what the expected behavior should be
+- Steps to reproduce the issue or context for how it was discovered
+- Any initial findings, error messages, or relevant logs
+- Links to runbooks, dashboards, or related tickets
+
+### Status
+
+Status reflects where a ticket currently sits in your workflow. Every ticket moves through statuses as work progresses.
+
+| Status | Meaning |
+|---|---|
+| **To Do** | The ticket has been created and is waiting to be picked up. |
+| **In Progress** | Someone is actively working on the issue. |
+| **In Review** | The fix or change has been applied and is under review or verification. |
+| **Done** | The work is complete and verified. The ticket is resolved. |
+| **Closed** | The ticket has been formally closed — either resolved, duplicate, or no longer relevant. |
+
+### Priority
+
+Priority tells your team how urgently a ticket needs attention. Setting the right priority helps everyone triage their work queue and ensures critical issues get handled first.
+
+<Info>
+  When in doubt, lean toward a lower priority — it's easier to escalate a ticket than to create alert fatigue by over-prioritizing. Reserve **Critical** for situations that are actively impacting production systems or end users.
+</Info>
+
+| Priority | When to Use |
+|---|---|
+| **Critical** | Active outage or severe degradation affecting production systems or users right now. Requires immediate response. |
+| **High** | Significant issue that will escalate if not addressed soon, but systems are still partially functional. |
+| **Medium** | Notable problem that should be addressed in the current cycle, but is not immediately blocking work. |
+| **Low** | Minor issue, cosmetic problem, or improvement that can be scheduled for a future sprint. |
+
+<Info>
+  Critical tickets automatically trigger escalation notifications to on-call personnel. Make sure your on-call schedule is configured under **Settings → On-Call** so the right people are alerted.
+</Info>
+
+### Category
+
+Categories group tickets by the part of your infrastructure they relate to. This makes it easier to filter the board and assign tickets to the right team or specialist.
+
+- **Network** — Connectivity issues, firewall rules, VPN, DNS, load balancers
+- **Server** — Hardware faults, OS-level issues, capacity, provisioning
+- **Database** — Query performance, replication lag, backups, schema changes
+- **Application** — Bugs, deployment failures, service errors, API issues
+- **Facilities** — Physical infrastructure, power, cooling, data center access
+
+Your administrator can add or rename categories to match your organization's structure.
+
+### Assignee and Reporter
+
+- **Assignee** — The person responsible for resolving the ticket. A ticket can only have one assignee at a time, ensuring clear ownership. You can reassign a ticket at any point as work evolves.
+- **Reporter** — The person who opened the ticket. Resolve automatically sets this to the logged-in user who created the ticket. The reporter receives notifications when the ticket's status changes.
+
+### Due Date
+
+The due date communicates when the ticket should be resolved. Resolve uses this field to:
+- Sort and filter tickets by urgency on the board
+- Send automated reminders as the deadline approaches
+- Flag overdue tickets with a visual indicator and escalation notification
+
+### Tags and Labels
+
+Tags are freeform labels you can attach to any ticket for additional context. Use them to group related tickets, mark tickets for a specific sprint or incident, or flag tickets for follow-up. Unlike categories, tags are flexible and team-defined.
+
+Examples: `incident-2024-09`, `post-mortem`, `needs-runbook`, `compliance`
+
+### Comments and Attachments
+
+The comment thread on a ticket is the canonical log of work activity. Use comments to:
+- Post status updates and findings
+- Ask questions and tag teammates with `@mentions`
+- Document decisions made during resolution
+
+Attachments let you upload screenshots, log files, configuration diffs, or any supporting files directly to the ticket so all context stays in one place.
+
+---
+
+## Ticket Lifecycle
+
+A ticket moves through a predictable lifecycle from the moment it is created to the moment it is closed.
+
+<Steps>
+  <Step title="Creation">
+    A team member (or an automated integration) opens a ticket, fills in the title, description, category, and priority, and optionally sets a due date. The ticket enters the **To Do** column.
+  </Step>
+  <Step title="Assignment">
+    A team lead or the ticket creator assigns the ticket to the appropriate engineer. The assignee receives an instant notification. The ticket remains in **To Do** until work begins.
+  </Step>
+  <Step title="Work Begins">
+    The assignee picks up the ticket and moves it to **In Progress**. They use the comment thread to log findings, post updates, and communicate blockers.
+  </Step>
+  <Step title="Review">
+    Once the fix or change is applied, the assignee moves the ticket to **In Review**. A peer or team lead verifies the resolution — running tests, checking dashboards, or confirming with the reporter that the issue is resolved.
+  </Step>
+  <Step title="Resolution">
+    After verification, the ticket moves to **Done**. The reporter and any watchers are notified automatically. The resolution can be documented in a final comment before the ticket is closed.
+  </Step>
+  <Step title="Closure">
+    The ticket is moved to **Closed**, marking it as part of the historical record. Closed tickets are searchable and can be referenced when similar issues arise in the future.
+  </Step>
+</Steps>
+
+<Info>
+  You can reopen a **Closed** ticket if the same issue recurs. Reopening preserves the full comment history, making it easier to understand what was tried before.
+</Info>

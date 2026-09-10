@@ -1,0 +1,149 @@
+---
+title: "Managing and Updating Infrastructure Tickets"
+sidebarTitle: "Manage Tickets"
+description: "Learn how to update, reassign, comment on, and resolve tickets in Resolve to keep your infrastructure work organized and visible."
+---
+
+Opening a ticket is just the beginning. Keeping tickets accurate and up-to-date as work progresses is what turns Resolve into a reliable record of your infrastructure operations — not just a backlog. This guide covers every action you can take on a ticket after it's been created, from editing details and reassigning ownership to bulk operations across multiple tickets.
+
+## Updating Ticket Details
+
+You can edit the title, description, priority, category, due date, and tags on any ticket you have permission to modify.
+
+<Steps>
+  <Step title="Open the ticket">
+    Click the ticket from the Kanban board or the ticket list view to open the detail panel.
+  </Step>
+  <Step title="Click the Edit button">
+    Click the pencil icon next to the field you want to change, or click **Edit Details** at the top of the panel to open all fields at once.
+  </Step>
+  <Step title="Make your changes">
+    Update the relevant fields. All changes are tracked in the ticket's **Activity Log** with a timestamp and your name, so teammates can see exactly what changed and when.
+  </Step>
+  <Step title="Save">
+    Click **Save** to confirm your changes. Watchers on the ticket will receive a notification if you changed the priority or due date.
+  </Step>
+</Steps>
+
+<Note>
+  Changing the priority of a ticket to **Critical** after creation sends the same immediate on-call notifications as setting it Critical at creation time. Make sure an escalation is genuinely warranted before upgrading priority on an existing ticket.
+</Note>
+
+## Changing Ticket Status
+
+Every ticket moves through a lifecycle: **To Do → In Progress → In Review → Done**. You can change a ticket's status in two ways:
+
+**From the detail view:** Open the ticket and use the **Status** dropdown near the top of the panel to select a new status. This is the most reliable method, especially when you need to leave a comment explaining the status change at the same time.
+
+**Via drag-and-drop on the Kanban board:** Drag the ticket card from one column to another. The status updates instantly. This method is faster during standups and review sessions when you're moving multiple tickets.
+
+<Note>
+  Drag-and-drop and the status dropdown are functionally equivalent — both update the same underlying status field and both record the change in the Activity Log. Use whichever fits your workflow in the moment.
+</Note>
+
+## Reassigning a Ticket
+
+<Steps>
+  <Step title="Open the ticket detail view">
+    Click the ticket you want to reassign.
+  </Step>
+  <Step title="Click the Assignee field">
+    Click the current assignee's name or the **Unassigned** placeholder next to the **Assignee** label.
+  </Step>
+  <Step title="Select the new assignee">
+    Search by name or scroll through your team list and click the new owner. You can also click **Unassign** to remove the current owner and return the ticket to the unassigned pool.
+  </Step>
+</Steps>
+
+The new assignee receives a notification immediately, and the reassignment is logged in the Activity Log with both the previous and new owner's names.
+
+## Adding Comments and @Mentioning Teammates
+
+Comments are the primary way to communicate progress, share findings, and ask questions directly on a ticket — keeping context where the work lives rather than in separate chat threads.
+
+<Steps>
+  <Step title="Open the ticket and scroll to Comments">
+    The comment box sits at the bottom of every ticket detail panel.
+  </Step>
+  <Step title="Write your comment">
+    Type your update, question, or finding. Use Markdown formatting for clarity: backticks for inline code, triple backticks for log blocks, and `**bold**` for emphasis.
+  </Step>
+  <Step title="@mention teammates as needed">
+    Type `@` followed by a teammate's name to notify them directly. They'll receive an in-app and email notification linking back to this specific comment, regardless of whether they are the assignee or a watcher.
+  </Step>
+  <Step title="Post the comment">
+    Click **Add Comment**. All watchers on the ticket are notified of the new comment based on their notification preferences.
+  </Step>
+</Steps>
+
+## Attaching Files and Screenshots
+
+Attach supporting evidence — log files, screenshots, configuration exports — directly to a ticket from the detail view.
+
+- Drag and drop files onto the **Attachments** area below the description
+- Click **Browse Files** to select files from your device
+- Paste screenshots inline into any comment or description field with `Ctrl+V` / `Cmd+V`
+
+Supported formats include PNG, JPG, GIF, PDF, CSV, and plain text files up to 25 MB each.
+
+## Closing vs. Resolving a Ticket
+
+Resolve distinguishes between two terminal states to give you accurate reporting on how work actually ends.
+
+<CardGroup cols={2}>
+  <Card title="Resolved" icon="circle-check">
+    The problem described in the ticket has been fixed and verified. The underlying issue no longer exists. Use **Resolved** when you have confirmed the fix is working.
+  </Card>
+  <Card title="Closed" icon="xmark-circle">
+    The ticket is no longer active, but not because the problem was fixed. Use **Closed** for duplicates, tickets opened in error, issues that won't be addressed, or work that was superseded by a different ticket.
+  </Card>
+</CardGroup>
+
+<Note>
+  Both Resolved and Closed tickets are removed from the active Kanban board view by default. You can still find them by switching to the **All Tickets** list view and filtering by status. Resolved and Closed tickets can be reopened at any time if an issue recurs.
+</Note>
+
+## Searching and Filtering the Ticket List
+
+Use the **Ticket List** view (accessible from the left sidebar) for powerful search and filtering across all tickets.
+
+- **Search bar:** Full-text search across ticket titles, descriptions, and comments
+- **Filter panel:** Filter by assignee, status, priority, category, tag, due date range, and creator
+- **Saved filters:** Click **Save Filter** after configuring a combination to pin it to your sidebar for quick access
+- **Sort:** Sort results by created date, updated date, due date, or priority
+
+<Tip>
+  Save a filter for "High + Critical tickets assigned to me with an open status" and pin it to your sidebar. It becomes your personal triage view every morning.
+</Tip>
+
+## Bulk Actions
+
+When you need to update multiple tickets at once, use bulk actions instead of opening each ticket individually.
+
+<Steps>
+  <Step title="Switch to the Ticket List view">
+    Click **Ticket List** in the left sidebar.
+  </Step>
+  <Step title="Select tickets">
+    Click the checkbox on the left side of each ticket row you want to update. Click the checkbox in the header row to select all tickets matching your current filter.
+  </Step>
+  <Step title="Open the Bulk Actions menu">
+    A toolbar appears at the bottom of the screen when one or more tickets are selected. Click **Bulk Actions** to see available operations.
+  </Step>
+  <Step title="Choose an action">
+    Available bulk actions include:
+
+    - **Change Status** — move all selected tickets to a new status
+    - **Reassign** — set a new assignee for all selected tickets
+    - **Change Priority** — update the priority level across selected tickets
+    - **Add Tag** — apply a tag to all selected tickets
+    - **Close** — close all selected tickets at once
+  </Step>
+  <Step title="Confirm">
+    Review the summary of changes and click **Apply**. All changes are logged individually in each affected ticket's Activity Log.
+  </Step>
+</Steps>
+
+<Note>
+  Bulk actions are irreversible in a single click — there is no undo. Double-check your selection before confirming, especially when bulk-closing or bulk-reassigning a large number of tickets.
+</Note>

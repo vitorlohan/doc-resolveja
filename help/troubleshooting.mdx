@@ -1,0 +1,168 @@
+---
+title: "Troubleshoot Common Issues in Resolve"
+sidebarTitle: "Troubleshooting"
+description: "Solutions to the most common problems users encounter in Resolve, from login issues to missing notifications and board display problems."
+---
+
+Most issues in Resolve have a straightforward fix. This page walks you through solutions to the problems users encounter most often, organized by area. Work through the relevant steps for your issue, and if nothing here resolves it, there's a support contact option at the bottom of this page.
+
+## Login & Access
+
+<AccordionGroup>
+
+  <Accordion title="Can't log in or forgot my password">
+    If you can't sign in to Resolve, try the following steps in order:
+
+    1. **Check your email address** — Make sure you're using the email address your Resolve account is registered under. If your organization uses SSO, use your company email rather than a personal one.
+    2. **Reset your password** — On the login page, click **Forgot password?** and enter your email. You'll receive a reset link within a few minutes. Check your spam or junk folder if it doesn't arrive.
+    3. **Clear your browser cache** — Stale cookies or cached data can sometimes interfere with login. Clear your browser cache and try again in a private/incognito window.
+    4. **Check with your Admin** — If you still can't log in, your account may have been deactivated or the invitation may have expired. Contact your Resolve administrator to verify your account status.
+
+    If your organization uses Single Sign-On (SSO), password resets must go through your identity provider (e.g., Okta, Google Workspace) — not Resolve directly.
+  </Accordion>
+
+  <Accordion title="Account locked or deactivated">
+    Resolve accounts can be locked after multiple failed login attempts, or deactivated by an Admin.
+
+    - **Locked account** — Accounts lock automatically after 10 failed login attempts within 30 minutes. Wait 30 minutes and try again, or click **Forgot password?** to reset your credentials and unlock the account immediately.
+    - **Deactivated account** — If you see a message indicating your account is deactivated, you'll need an Admin to reactivate it. Deactivated accounts retain all their ticket history and can be restored without any data loss.
+
+    Contact your Resolve administrator and ask them to check your account status under **Settings → Team → Members**.
+  </Accordion>
+
+  <Accordion title="'Access denied' when opening a ticket">
+    If you can see the board but get an "Access denied" error when opening a specific ticket, one of the following is likely:
+
+    - **Your role doesn't have access** — Viewers and Members can see all tickets by default, but your Admin may have restricted certain ticket categories or projects. Contact your Admin to request access.
+    - **The ticket is archived** — Archived tickets don't open from regular board links. Switch to **Archive** view (found under the board view toggle) to access them.
+    - **Stale link** — The ticket may have been deleted. If the URL came from an old email or message, the ticket may no longer exist.
+
+    If none of these explanations fit, ask your Admin to verify your role permissions under **Settings → Team → Members**.
+  </Accordion>
+
+</AccordionGroup>
+
+## Tickets
+
+<AccordionGroup>
+
+  <Accordion title="Ticket not showing on the Kanban board">
+    If you're expecting to see a ticket but it's not appearing on the board, check the following:
+
+    1. **Check your active filters** — Click the **Filter** button and verify that no filters are hiding the ticket. Try clearing all filters with **Reset Filters** to see the full board.
+    2. **Check the current view** — Make sure you haven't accidentally switched to a personal filter view (e.g., "My Tickets only"). Switch to **All Tickets** to see every open ticket.
+    3. **Check if it's archived** — Tickets in the auto-archive queue or manually archived are hidden from the main board. Open the **Archive** view to look for it.
+    4. **Check its status column** — The ticket may exist in a column that's scrolled out of view. Scroll horizontally to see all columns, or switch to List View for a complete ticket list.
+
+    If the ticket was recently created and still doesn't appear, try refreshing the page — the board updates in real time, but a hard refresh can resolve sync delays.
+  </Accordion>
+
+  <Accordion title="Can't edit a ticket">
+    If the edit fields in a ticket are grayed out or unresponsive:
+
+    - **Check your role** — Only Admins and Members can edit tickets. If you're a Viewer, editing is not available. Contact your Admin to request a role change if appropriate.
+    - **Check if the ticket is archived** — Archived tickets are read-only. Unarchive the ticket first if you need to make changes (Admin required).
+    - **Check if the ticket is locked** — Admins can lock individual tickets to prevent edits. A locked ticket will show a padlock icon in the top-right corner of the detail panel. Contact your Admin to unlock it.
+    - **Check your browser** — Try a different browser or disable browser extensions that might interfere with form inputs.
+  </Accordion>
+
+  <Accordion title="Ticket disappeared after an update">
+    If a ticket vanished right after you made a change, the most common cause is a status change that triggered a board filter:
+
+    1. **Clear all board filters** and check if the ticket reappears.
+    2. **Check the Archive** — If the ticket was moved to a column with auto-archive enabled, and auto-archive ran recently, it may have been archived. Look in **Archive** view.
+    3. **Check activity history** — If you have Admin access, go to **Settings → Activity Log** and search for the ticket ID or title to see a record of recent changes.
+    4. **Check with teammates** — Someone may have moved, archived, or deleted the ticket.
+
+    If the ticket is gone and you believe it was deleted in error, contact your Resolve administrator — deleted tickets cannot be recovered, but your Admin can confirm whether it was deleted and by whom via the activity log.
+  </Accordion>
+
+  <Accordion title="Can't change the status of a ticket">
+    If you're unable to move a ticket to a different column or change its status dropdown:
+
+    - **Check your role** — Viewers cannot change ticket status. Ensure you're logged in as a Member or Admin.
+    - **Refresh the board** — Another team member may have recently changed the ticket's status at the same moment. Refresh the page to sync the latest state.
+    - **Check for column restrictions** — Admins can configure column transition rules that restrict which statuses a ticket can move to from its current state. If the target column is grayed out in the status dropdown, a transition rule is blocking the move. Check with your Admin.
+    - **Check your connection** — Status changes require an active connection. If you're offline, changes will fail silently. Check your internet connection and try again.
+  </Accordion>
+
+</AccordionGroup>
+
+## Notifications
+
+<AccordionGroup>
+
+  <Accordion title="Not receiving email notifications">
+    If you're expecting email alerts but they're not arriving:
+
+    1. **Check your spam/junk folder** — Email clients often filter automated notifications. Add `notifications@resolve.app` to your safe senders list.
+    2. **Check your notification preferences** — Go to your **Profile → Notification Preferences** and confirm that email notifications are enabled for the relevant event types.
+    3. **Verify your email address** — Under **Profile → Account Settings**, confirm that your registered email address is correct.
+    4. **Check with your IT team** — Some corporate email environments filter or block notifications from third-party services at the domain level. Your IT team may need to whitelist the Resolve sending domain.
+    5. **Check notification rules** — If you're expecting to receive a notification due to an org-wide rule, ask your Admin to verify the rule is active and correctly configured.
+  </Accordion>
+
+  <Accordion title="Receiving too many notifications">
+    If your inbox or in-app feed is overwhelmed with Resolve alerts:
+
+    1. **Adjust personal preferences** — Go to **Profile → Notification Preferences** and turn off event types you don't need (e.g., every comment on every ticket you're watching).
+    2. **Review your watched tickets** — If you're watching a large number of high-activity tickets, you'll receive a notification for every update. Open each ticket and click **Unwatch** for tickets you don't need to track closely.
+    3. **Talk to your Admin** — If you're receiving alerts from org-wide notification rules that aren't relevant to you, ask your Admin to review the rule's recipient list. See the [Notification Rules](/configuration/notification-rules) guide for context.
+
+    <Tip>
+      Use in-app notifications as your primary channel for lower-priority updates, and reserve email notifications for only the most critical events (e.g., tickets assigned to you or Critical-priority alerts).
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Delayed notifications">
+    Resolve delivers notifications in real time under normal conditions. If you're experiencing consistent delays:
+
+    - **In-app notifications** — Delays are usually caused by a slow or intermittent internet connection. Try refreshing the page. If delays persist, try clearing your browser cache.
+    - **Email notifications** — Email delivery times depend on your mail provider and any filtering rules in place. Most emails arrive within 1–2 minutes, but delivery can occasionally take up to 10 minutes.
+    - **Check Resolve system status** — If delays are affecting multiple team members simultaneously, there may be a platform-side issue. Check the Resolve status page or contact your administrator.
+
+    If you frequently experience notification delays that impact your team's response times, consider switching higher-priority notification rules to in-app delivery, which is generally faster than email.
+  </Accordion>
+
+</AccordionGroup>
+
+## Board & Display
+
+<AccordionGroup>
+
+  <Accordion title="Kanban board not loading">
+    If the board shows a blank page, spinner, or error message:
+
+    1. **Refresh the page** — Press **Ctrl+R** (Windows) or **Cmd+R** (Mac) for a hard refresh.
+    2. **Check your internet connection** — The board requires an active connection to load ticket data.
+    3. **Try a different browser** — If the board loads in another browser, the issue is likely a browser extension or cached data in your primary browser. Try disabling extensions one by one, or clear your browser cache.
+    4. **Check with teammates** — If others on your team are also affected, the issue may be on the Resolve platform side. Contact your administrator.
+    5. **Try List View** — If the Kanban layout specifically fails to render, switching to **List View** may let you access your tickets while the issue is investigated.
+  </Accordion>
+
+  <Accordion title="Cards showing in the wrong column">
+    If ticket cards appear in a column that doesn't match their status:
+
+    1. **Refresh the board** — Real-time sync occasionally falls behind. A page refresh will re-fetch all ticket statuses from the server and display the current state accurately.
+    2. **Check for a stale filter** — A saved filter view may be showing you a cached board state. Click **Reset Filters** to clear any active views.
+    3. **Check for recent column renaming** — If an Admin recently renamed or reordered columns, cards may visually appear in the "wrong" place until the page is refreshed.
+    4. **Verify the ticket status inside the ticket** — Open the affected ticket and check the **Status** field directly. If the status doesn't match the column it's displayed in, this is a display sync issue — refresh the page.
+
+    If the problem persists after refreshing across multiple sessions, report it to your Resolve administrator so they can investigate a potential data sync issue.
+  </Accordion>
+
+  <Accordion title="Board filters not working as expected">
+    If filters appear to produce incorrect or unexpected results:
+
+    1. **Check for stacked filters** — Multiple active filters are combined with AND logic, which can result in no tickets matching all conditions. Clear individual filters one at a time to isolate the issue.
+    2. **Check the date range filter** — A date filter might be excluding tickets you expect to see. Try clearing the date range to include all time periods.
+    3. **Check for archived tickets** — Filters only apply to active tickets on the board. Archived tickets are not included in filter results even if they match the criteria.
+    4. **Reset and rebuild the filter** — Click **Reset Filters** to clear all active filters, then re-apply them one at a time to identify which filter is producing unexpected results.
+    5. **Check the default view setting** — If your Admin has set a board-wide default filter, it may be overriding your custom filter selections. Contact your Admin to review the default view settings.
+  </Accordion>
+
+</AccordionGroup>
+
+<Note>
+  If your issue isn't covered here or the steps above haven't resolved it, contact the Resolve support team. Reach out directly to your Resolve administrator, or email **support@resolve.app** with a description of the issue, your account email, and any relevant ticket IDs or screenshots. Most issues are resolved within one business day.
+</Note>

@@ -1,13 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
+  "projectType": "saas",
+  "projectName": "Resolve",
+  "projectDescription": "An internal infrastructure ticketing system for opening and managing maintenance tickets, organized as a Kanban board with automatic notifications.",
   "theme": "almond",
-  "name": "Resolve",
-  "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
-    "dark": "#4fa1ab"
-  },
-  "favicon": "/favicon.svg",
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
   "navigation": {
     "tabs": [
       {
@@ -58,24 +56,14 @@
       }
     ]
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@resolve.io"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Open App",
-      "href": "https://app.resolve.io"
-    }
-  },
-  "footer": {
-    "socials": {}
-  }
+  "keyFeatures": [
+    "Kanban board for visual ticket management",
+    "Infrastructure and maintenance ticket creation",
+    "Automatic notifications for ticket updates",
+    "Team collaboration and ticket assignment",
+    "Ticket status tracking and workflow management",
+    "User roles and access control",
+    "Configurable notification rules"
+  ],
+  "publicApiSurface": []
 }

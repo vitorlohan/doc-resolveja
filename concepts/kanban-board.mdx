@@ -1,0 +1,140 @@
+---
+title: "Visualize Your Work with the Kanban Board"
+sidebarTitle: "Kanban Board"
+description: "The Resolve Kanban board gives your team a real-time visual overview of all infrastructure tickets, organized by status and priority."
+---
+
+The Kanban board is the central workspace in Resolve. Instead of hunting through a flat list of tickets, your team gets a live, at-a-glance view of every open infrastructure issue — organized by where it stands in the workflow. Operations teams move fast, and the board is designed to surface the right information at the right time: what's blocked, what's overdue, and what needs a hand.
+
+## Board Layout
+
+The board is organized as a set of vertical columns, each corresponding to a ticket status. Tickets appear as cards within the column that matches their current status.
+
+| Column | Status | What it contains |
+|---|---|---|
+| **To Do** | Pending | Tickets that have been created but not yet started. |
+| **In Progress** | Active | Tickets that are actively being worked on. |
+| **In Review** | Verification | Tickets where the fix is applied and awaiting confirmation. |
+| **Done** | Resolved | Tickets that have been verified and resolved. |
+| **Closed** | Archived | Tickets that have been formally closed. |
+
+Columns are fixed and map directly to the ticket lifecycle. You cannot rename or reorder them, but you can hide the **Closed** column to keep your board focused on active work.
+
+<Note>
+  The **Done** and **Closed** columns are collapsed by default in the **My Tickets** view to reduce visual clutter. You can expand them at any time using the column header toggle.
+</Note>
+
+## Reading the Board
+
+Every ticket on the board is represented as a card. Cards are designed to give you the key context you need without having to open the ticket.
+
+### Card Colors and Priority Indicators
+
+The left border of each card is color-coded by priority, so you can instantly see the urgency of any ticket:
+
+- 🔴 **Red border** — Critical
+- 🟠 **Orange border** — High
+- 🟡 **Yellow border** — Medium
+- 🔵 **Blue border** — Low
+
+Cards with a **Critical** priority also display a pulsing indicator in the top-right corner, making them easy to spot even on a busy board.
+
+### Assignee Avatars
+
+Each card displays the assignee's avatar in the bottom-right corner. Hovering over the avatar shows the assignee's full name. If a ticket is **unassigned**, a grey placeholder icon appears instead — a quick visual cue that the ticket needs an owner.
+
+### Due Date Indicators
+
+- A **grey date label** means the due date is comfortably in the future.
+- An **amber date label** means the due date is within the next 24 hours.
+- A **red date label** means the ticket is overdue.
+
+### Category Badge
+
+A small category badge (e.g., "Network", "Database") appears on each card so you can quickly see what part of your infrastructure a ticket relates to, even when browsing across columns.
+
+<Tip>
+  Train your team to glance at the **To Do** column at the start of each shift for red-bordered or amber-dated cards. Catching Critical and overdue tickets early prevents them from falling through the cracks.
+</Tip>
+
+---
+
+## Filtering and Searching the Board
+
+When your board has a high volume of tickets, filters help you cut through the noise and focus on what matters to you.
+
+### Available Filters
+
+<CardGroup cols={2}>
+  <Card title="By Assignee" icon="user">
+    Show only tickets assigned to a specific team member. Useful for workload reviews and stand-ups.
+  </Card>
+  <Card title="By Priority" icon="flag">
+    Filter down to Critical and High tickets when you need to focus on the most urgent work.
+  </Card>
+  <Card title="By Category" icon="tag">
+    Scope the board to a single infrastructure domain — for example, view only Database tickets during a database incident.
+  </Card>
+  <Card title="By Due Date" icon="calendar">
+    Surface tickets due today, this week, or already overdue to manage deadlines proactively.
+  </Card>
+</CardGroup>
+
+### Search
+
+The search bar at the top of the board performs a full-text search across ticket titles and descriptions. Results are highlighted in place on the board — non-matching cards are dimmed so you stay in the Kanban context rather than switching to a list view.
+
+<Tip>
+  Combine filters for a focused view. For example, filter by **Assignee = You** and **Priority = Critical or High** to build a personal triage queue at the start of your day.
+</Tip>
+
+<Note>
+  Filters are session-scoped by default — they reset when you navigate away from the board. To save a filter combination for repeated use, click **Save View** and give it a name. Saved views appear in the left sidebar.
+</Note>
+
+---
+
+## Drag-and-Drop
+
+Moving a ticket between columns is as simple as dragging its card from one column and dropping it into another. Resolve updates the ticket's status instantly and logs the change in the ticket's comment history with a timestamp and the name of the team member who made the move.
+
+<Steps>
+  <Step title="Pick up the card">
+    Click and hold any ticket card on the board. The card lifts and the valid drop targets highlight.
+  </Step>
+  <Step title="Drag to the target column">
+    Move the card to the column that reflects the new status. The column highlights when your card is positioned over a valid drop zone.
+  </Step>
+  <Step title="Drop to confirm">
+    Release the card. Resolve saves the status change immediately and notifies the ticket's reporter and any watchers.
+  </Step>
+</Steps>
+
+<Note>
+  Only users with the **Editor** role or higher can move tickets via drag-and-drop. **Viewer** role users can browse the board but cannot modify ticket status. Role permissions are managed under **Settings → Team Members**.
+</Note>
+
+---
+
+## Board Views
+
+Resolve provides three built-in board views to suit different working contexts. Switch between them using the view selector at the top-left of the board.
+
+<CardGroup cols={2}>
+  <Card title="All Tickets" icon="layout-grid">
+    The default view. Shows every open ticket across your organization, regardless of assignee or category. Best for team leads and during incident response.
+  </Card>
+  <Card title="My Tickets" icon="circle-user">
+    Shows only tickets assigned to you. This is your personal work queue — a focused view of exactly what you need to act on.
+  </Card>
+  <Card title="By Category" icon="folders">
+    Groups tickets within each column by their category (Network, Server, Database, etc.). Useful when multiple specialists are working the board simultaneously.
+  </Card>
+  <Card title="Saved Views" icon="bookmark">
+    Any filter combination you've saved appears here as a named view. Share a saved view with your team by copying its URL.
+  </Card>
+</CardGroup>
+
+<Tip>
+  Set **My Tickets** as your default board view in **Settings → Preferences → Default Board View** so you land directly on your personal queue every time you open Resolve.
+</Tip>

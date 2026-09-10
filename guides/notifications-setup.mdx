@@ -1,0 +1,78 @@
+---
+title: "Configure Notifications for Your Resolve Account"
+sidebarTitle: "Notifications Setup"
+description: "Customize which ticket events trigger notifications for you in Resolve, including email and in-app alerts for assignments, updates, and due dates."
+---
+
+Resolve sends notifications to keep you informed about the tickets that matter to you — without burying you in alerts for work you're not involved in. By configuring your notification preferences, you can stay on top of critical events, respond quickly when you're needed, and silence the noise when you're not. This guide walks you through the full setup and explains every available notification event.
+
+## Where to Find Notification Settings
+
+Your notification preferences live in your personal profile, separate from any admin-controlled org-wide settings. To get there, click your **avatar** or **name** in the top-right corner of the screen and select **Notification Preferences** from the dropdown menu.
+
+## Set Up Your Notifications
+
+<Steps>
+  <Step title="Open the Profile menu">
+    Click your avatar or name in the top-right corner of the Resolve interface. A dropdown menu will appear with account options.
+  </Step>
+  <Step title="Go to Notification Preferences">
+    Click **Notification Preferences** in the dropdown. You'll land on your personal notification settings page showing all available events and delivery channels.
+  </Step>
+  <Step title="Choose the events you want to be notified about">
+    Review the full list of notification events (see the table below). Toggle each event on or off based on your role and preferences. You can configure each event independently — enabling some for in-app only, others for both email and in-app, and disabling events that don't apply to you.
+  </Step>
+  <Step title="Choose your delivery channels">
+    For each enabled event, select one or both delivery channels:
+
+    - **In-app** — A notification appears in the bell icon in the top navigation bar. In-app notifications are collected in your notification feed and persist until you dismiss them.
+    - **Email** — A notification is sent to your account email address. Email notifications include a direct link back to the relevant ticket.
+
+    You can use both channels for critical events — such as ticket assignments and due date warnings — and in-app only for lower-priority updates like comment additions.
+  </Step>
+  <Step title="Save your preferences">
+    Click **Save Preferences** at the bottom of the page. Your settings take effect immediately. You can return to this page and adjust your preferences at any time.
+  </Step>
+</Steps>
+
+## Notification Events
+
+Each event below can be enabled or disabled independently, with a separate channel selection for each.
+
+| Event | Description |
+|---|---|
+| **Ticket assigned to me** | Triggers when you are set as the assignee on a new or existing ticket. Recommended: on for both channels. |
+| **Ticket I'm watching is updated** | Triggers when any field is edited on a ticket you are watching (title, description, priority, status, due date). |
+| **Comment added to my ticket** | Triggers when anyone adds a comment to a ticket where you are the assignee. |
+| **Ticket status changed** | Triggers when the status of a ticket you own or watch moves to a new stage (e.g., In Progress → In Review). |
+| **Due date within 24 hours** | Triggers a reminder the day before a ticket you own or watch is due. Useful for avoiding missed deadlines. |
+| **Ticket overdue** | Triggers when a ticket you own passes its due date without being resolved or closed. |
+| **Ticket resolved** | Triggers when a ticket you are watching or were previously assigned to is marked Resolved. |
+| **@mention in a comment** | Triggers whenever someone @mentions you in a comment, regardless of whether you are the assignee or a watcher. This event is always on and cannot be disabled. |
+
+<Note>
+  The **@mention** notification event is mandatory and cannot be turned off. If a teammate explicitly mentions you in a comment, you will always receive an in-app notification to ensure you see the message. You can disable the email delivery for @mentions if you prefer.
+</Note>
+
+## Muting Notifications for a Specific Ticket
+
+If you are watching a high-traffic ticket — a major incident ticket with dozens of comment updates, for example — you can mute notifications for that ticket without changing your global preferences.
+
+<Steps>
+  <Step title="Open the ticket detail view">
+    Click on the ticket you want to mute.
+  </Step>
+  <Step title="Click the Watch / Unwatch button">
+    Find the **Watching** button near the top-right of the ticket detail panel (it shows an eye icon when active). Click it to toggle off. The button will update to show **Not Watching**.
+  </Step>
+</Steps>
+
+Unwatching a ticket stops all event notifications for that ticket. You can re-watch it at any time by clicking the same button again. Note that if you are the ticket's **assignee**, you will still receive assignment-related notifications even if you unwatch it — unwatching only suppresses the watcher-triggered events.
+
+<Tip>
+  During a major incident, it's common to have many people watching a coordination ticket. Once the incident is resolved and the ticket is closed, go back and unwatch it so stale notifications don't clutter your feed when the ticket is updated during post-mortem or cleanup.
+</Tip>
+
+<Note>
+  Your organization's Resolve administrator can configure **org-wide notification defaults** that apply to all new users when they first join. These defaults set a baseline — for example, all new users might have "Ticket assigned to me" enabled for both channels out of the box. You can always override these defaults in your personal Notification Preferences. If you believe the org-wide defaults are misconfigured for your team, contact your Resolve admin to adjust them.
+</Note>

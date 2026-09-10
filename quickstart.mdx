@@ -1,47 +1,76 @@
 ---
-title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
+title: "Get Started with Resolve in Minutes"
+sidebarTitle: "Quickstart"
+description: "Learn how to log in, create your first infrastructure ticket, and track it on the Kanban board in just a few steps."
 ---
 
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
-
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
-
-## Prerequisites
-
-Before you begin, you must have:
-
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
-
-## Get started
+This guide walks you through everything you need to go from a fresh login to actively managing infrastructure tickets on the Resolve Kanban board. By the end, you'll have created your first ticket, moved it through the workflow, and confirmed that notifications are set up correctly for your team.
 
 <Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
+  <Step title="Log in to Resolve">
+    Open Resolve in your browser and enter your organization credentials on the sign-in screen.
 
-    ```bash
-    npm install your-package
-    ```
+    - If you're logging in for the first time, look for an invitation email from your Resolve administrator. Click **Accept Invitation** to set your password and activate your account.
+    - If your organization uses single sign-on (SSO), click **Sign in with SSO** and authenticate through your identity provider.
+
+    Once authenticated, you'll land on the main Kanban board.
   </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
+  <Step title="Navigate to the Kanban board">
+    The Kanban board is your default view in Resolve. You'll see three columns: **To Do**, **In Progress**, and **Done**.
 
-    ```bash
-    your-cli init
-    ```
+    - Use the **project selector** in the top navigation bar to switch between boards if your organization has multiple projects.
+    - Use the **filter bar** above the board to narrow tickets by assignee, priority, or category.
+    - Click any existing ticket card to open its detail panel and see its full history.
   </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
+  <Step title="Create your first ticket">
+    Click the **+ New Ticket** button in the top-right corner of the board to open the ticket creation form. Fill in the following fields:
 
-    ```bash
-    your-cli start
-    ```
+    | Field | Description |
+    |---|---|
+    | **Title** | A short, descriptive summary of the issue (e.g., *Replace failing SSD on server rack B*) |
+    | **Description** | Full details of the problem, including any relevant context, error messages, or steps to reproduce |
+    | **Priority** | Choose **Low**, **Medium**, **High**, or **Critical** based on the urgency of the issue |
+    | **Assignee** | Select the team member responsible for resolving this ticket |
+    | **Category** | Tag the ticket with a category such as *Hardware*, *Network*, *Software*, or *Maintenance* |
+
+    When you're ready, click **Submit**. Your new ticket appears in the **To Do** column immediately.
+  </Step>
+  <Step title="Move the ticket through statuses">
+    As work progresses, drag and drop the ticket card across the board to reflect its current status:
+
+    1. **To Do** — The ticket has been created and is waiting to be picked up.
+    2. **In Progress** — Work has started. Drag the ticket to this column when your assignee begins.
+    3. **Done** — The issue is resolved. Drag the ticket here to close it out.
+
+    Every time you move a ticket, Resolve automatically sends a notification to the assignee and any team members watching the ticket. You can also update the status from inside the ticket detail panel using the **Status** dropdown.
+
+    <Info>
+      Moving a ticket to **Done** does not delete it. All closed tickets remain fully searchable in your ticket history.
+    </Info>
+  </Step>
+  <Step title="Check your notification settings">
+    Before you start managing tickets in earnest, confirm that your notification preferences are configured correctly so you receive the right alerts.
+
+    1. Click your **avatar** in the top-right corner and select **Profile & Settings**.
+    2. Go to the **Notifications** tab.
+    3. Enable or disable alerts for ticket assignments, status changes, comments, and mentions.
+    4. Verify that your email address is correct so you don't miss any updates.
+
+    For a full walkthrough of account preferences, see [Account Setup](/getting-started/account-setup).
   </Step>
 </Steps>
 
 <Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
-
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
+  Speed up your workflow with keyboard shortcuts. Press **N** anywhere on the board to open the new ticket form instantly, **/** to jump to the search bar, and **Esc** to close any open panel. You can view the full shortcut reference by pressing **?** at any time.
 </Tip>
+
+## Where to go next
+
+<CardGroup cols={2}>
+  <Card title="Account Setup" icon="circle-user" href="/getting-started/account-setup">
+    Configure your display name, avatar, timezone, and notification preferences for your Resolve account.
+  </Card>
+  <Card title="Creating Tickets" icon="ticket" href="/guides/creating-tickets">
+    Go deeper on ticket fields, priority guidelines, categories, and best practices for structured ticket creation.
+  </Card>
+</CardGroup>

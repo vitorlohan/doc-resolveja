@@ -1,0 +1,128 @@
+---
+title: "Manage User Roles and Permissions in Resolve"
+sidebarTitle: "User Roles"
+description: "Learn about Resolve's built-in user roles — Admin, Member, and Viewer — and how permissions control access to tickets, boards, and settings."
+---
+
+Resolve uses a straightforward role-based access model to make sure every team member has exactly the access they need — no more, no less. Whether you're onboarding a new engineer who needs full ticket management capabilities, adding a stakeholder who only needs read-only visibility, or granting administrative control to a team lead, roles give you clean, predictable control over what each person can do.
+
+## Built-In Roles
+
+Resolve includes three built-in roles. Every user must be assigned exactly one role.
+
+<CardGroup cols={3}>
+  <Card title="Admin" icon="shield-halved">
+    Full access to all features, including board configuration, notification rules, user management, and all ticket operations. Admins are responsible for Resolve's organization-wide settings.
+  </Card>
+  <Card title="Member" icon="user">
+    Can create, edit, comment on, and resolve tickets. Has full use of the Kanban board, filtering, and search. Cannot access Settings or manage other users.
+  </Card>
+  <Card title="Viewer" icon="eye">
+    Read-only access to the Kanban board and all tickets. Can view comments and attachments but cannot create, edit, or comment on tickets.
+  </Card>
+</CardGroup>
+
+## Permissions Reference
+
+The table below compares what each role can and cannot do across every key action in Resolve.
+
+| Action | Admin | Member | Viewer |
+|---|:---:|:---:|:---:|
+| View tickets and board | ✅ | ✅ | ✅ |
+| Create tickets | ✅ | ✅ | ❌ |
+| Edit ticket details | ✅ | ✅ | ❌ |
+| Change ticket status | ✅ | ✅ | ❌ |
+| Add comments | ✅ | ✅ | ❌ |
+| Add attachments | ✅ | ✅ | ❌ |
+| Assign tickets to others | ✅ | ✅ | ❌ |
+| Delete tickets | ✅ | ❌ | ❌ |
+| Archive tickets manually | ✅ | ✅ | ❌ |
+| Export ticket data | ✅ | ✅ | ❌ |
+| Configure board settings | ✅ | ❌ | ❌ |
+| Manage notification rules | ✅ | ❌ | ❌ |
+| Invite new users | ✅ | ❌ | ❌ |
+| Change user roles | ✅ | ❌ | ❌ |
+| Deactivate users | ✅ | ❌ | ❌ |
+
+## Inviting a New User
+
+Only Admins can invite new users to Resolve.
+
+<Steps>
+  <Step title="Open User Management">
+    Go to **Settings → Team → Members** in the left sidebar.
+  </Step>
+  <Step title="Click 'Invite User'">
+    Click the **+ Invite User** button in the top-right corner.
+  </Step>
+  <Step title="Enter the user's email">
+    Type the new user's email address in the invitation form. You can invite multiple users at once by entering multiple comma-separated addresses.
+  </Step>
+  <Step title="Assign a role">
+    Select **Admin**, **Member**, or **Viewer** from the Role dropdown. You can change this later if needed.
+  </Step>
+  <Step title="Send the invitation">
+    Click **Send Invite**. The user will receive an email with a link to set up their account. The invitation expires after **72 hours** — you can resend it from the Pending Invitations section if needed.
+  </Step>
+</Steps>
+
+<Tip>
+  When inviting stakeholders who only need visibility into infrastructure work — such as managers or compliance reviewers — assign them the **Viewer** role to give them access without the ability to modify tickets.
+</Tip>
+
+## Changing a User's Role
+
+You can update any user's role at any time, and the change takes effect immediately.
+
+<Steps>
+  <Step title="Open User Management">
+    Navigate to **Settings → Team → Members**.
+  </Step>
+  <Step title="Find the user">
+    Search by name or email in the Members list, or scroll to find the user.
+  </Step>
+  <Step title="Open role options">
+    Click the **role badge** next to the user's name (e.g., "Member") to open the role selector dropdown.
+  </Step>
+  <Step title="Select the new role">
+    Choose **Admin**, **Member**, or **Viewer**. A confirmation prompt will appear for promotions to Admin.
+  </Step>
+  <Step title="Confirm the change">
+    Click **Confirm**. The user's new permissions apply immediately — they will see updated access on their next page load.
+  </Step>
+</Steps>
+
+<Note>
+  Resolve requires at least one active Admin at all times. If you are the only Admin in your organization, you will not be able to demote your own role or deactivate your account until another user has been promoted to Admin first.
+</Note>
+
+## Deactivating a User
+
+When a team member leaves or no longer needs access to Resolve, you can deactivate their account rather than deleting it. Deactivation immediately revokes access while preserving the full history of their activity.
+
+<Steps>
+  <Step title="Open User Management">
+    Go to **Settings → Team → Members**.
+  </Step>
+  <Step title="Find the user">
+    Locate the user by name or email in the Members list.
+  </Step>
+  <Step title="Open their profile">
+    Click the user's name to open their profile panel.
+  </Step>
+  <Step title="Click 'Deactivate User'">
+    Scroll to the bottom of the profile panel and click **Deactivate User**, then confirm when prompted.
+  </Step>
+</Steps>
+
+**What happens after deactivation:**
+
+- The user is immediately signed out and cannot log back in.
+- All tickets previously assigned to them remain intact and continue to show their name in ticket history.
+- Tickets assigned to the deactivated user are **not automatically reassigned** — an Admin or Member should manually reassign any open tickets.
+- The user's comments and activity history are preserved for audit purposes.
+- Deactivated users do not count toward your seat limit and can be reactivated at any time from **Settings → Team → Deactivated Users**.
+
+<Warning>
+  Before deactivating a user, review their open tickets and reassign any that need continued attention. Unassigned tickets will remain on the board but will not trigger assignee-based notifications.
+</Warning>

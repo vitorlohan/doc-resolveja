@@ -1,0 +1,131 @@
+---
+title: "Collaborate Effectively with Your Team in Resolve"
+sidebarTitle: "Team Collaboration"
+description: "Discover how Resolve helps infrastructure teams collaborate on tickets through assignments, comments, @mentions, and shared Kanban views."
+---
+
+Infrastructure work is rarely a solo effort. Outages require coordinated response, maintenance tasks get handed off between shifts, and complex changes need review from multiple specialists. Resolve is built around that reality — every ticket is a shared workspace where your team can communicate, track changes, divide work, and maintain a clear record of decisions. This guide covers every collaboration feature available to you and your team.
+
+## Assigning Tickets and Co-Ownership
+
+Clear ownership is the foundation of effective collaboration. Every ticket should have one named assignee — the person responsible for driving it to resolution.
+
+<Steps>
+  <Step title="Assign during ticket creation">
+    Select an assignee from the **Assignee** field when opening a new ticket. If you're not sure who should own it yet, leave it unassigned and let your team self-assign during standup.
+  </Step>
+  <Step title="Assign or reassign from the ticket detail view">
+    Open any ticket and click the **Assignee** field to change ownership. The new assignee receives an immediate notification.
+  </Step>
+  <Step title="Use Watchers for co-ownership">
+    If multiple people need to stay informed without being the primary owner, have them **watch** the ticket (see the Watching section below). Watchers receive the same update notifications as the assignee without holding formal ownership.
+  </Step>
+</Steps>
+
+<Tip>
+  Assign every ticket that enters **In Progress** to a specific person. Unowned in-progress tickets are the most common source of work falling through the cracks — no one assumes they're responsible, so no one checks on it.
+</Tip>
+
+## @Mentioning Teammates in Comments
+
+When you need a specific person's attention on a ticket, @mention them directly in a comment rather than sending a separate message. This keeps the context attached to the work where anyone can see it later.
+
+To @mention someone, type `@` in any comment or description field and start typing their name. A suggestion dropdown appears — click the correct person to complete the mention. They receive an immediate in-app and email notification with a direct link to the comment, regardless of whether they're watching the ticket.
+
+@mentions are especially useful for:
+- Asking a specialist a targeted question without reassigning the ticket
+- Looping in a manager or stakeholder for visibility
+- Tagging someone to review and approve before a status change
+- Crediting a teammate who contributed a fix in a comment
+
+<Tip>
+  Keep @mentions purposeful. Tag people when you genuinely need their input or action — not just for FYI updates on tickets they don't own. Unnecessary mentions create noise that causes people to start ignoring them.
+</Tip>
+
+## Watching a Ticket
+
+Watching a ticket subscribes you to update notifications without making you the assignee. It's the right tool when you have a stake in a ticket's outcome but aren't the one doing the work.
+
+<Steps>
+  <Step title="Open the ticket you want to follow">
+    Click the ticket from the board or ticket list.
+  </Step>
+  <Step title="Click 'Watch'">
+    Find the **Watch** button (eye icon) near the top-right of the ticket detail panel. Click it — the button turns active and shows **Watching**.
+  </Step>
+</Steps>
+
+As a watcher, you receive notifications for the events you have enabled in your **Notification Preferences** — status changes, new comments, priority changes, and due date reminders. You can unwatch at any time by clicking the same button again.
+
+Common reasons to watch a ticket:
+- You escalated a ticket and want to know when it's resolved
+- You're an on-call manager overseeing active incidents
+- You depend on another team's ticket completing before your own work can proceed
+- You're learning the domain and want visibility without being in the critical path
+
+## Sharing Ticket Links
+
+Every ticket has a unique, permanent URL you can share with anyone who has access to your Resolve workspace. Copy the link from the browser address bar while viewing a ticket, or click the **Copy Link** icon in the ticket detail panel header.
+
+Paste ticket links in:
+- Slack or Teams messages to provide context without copy-pasting details
+- Incident channels to point responders directly to the coordination ticket
+- Change management or post-mortem documents
+- Email threads when escalating to stakeholders outside the team
+
+<Note>
+  Ticket links are only accessible to users with a Resolve account in your organization. Sharing a link externally with someone who doesn't have a Resolve login will redirect them to the login page.
+</Note>
+
+## Team Views on the Kanban Board
+
+The Kanban board's **All Tickets** view is your team's shared workspace — everyone sees the same board and any ticket moved by one person updates in real time for everyone else. Use this view during standups and incident response when the team needs a common picture.
+
+Switch to the **By Category** view to see workload distribution across infrastructure domains at a glance. Swim lanes make it easy to spot which areas are busy and which have available capacity.
+
+<Tip>
+  During a major incident, project the **All Tickets** board filtered to the incident tag on a shared screen. Every team member can see what's being worked on, what's blocked, and what needs a new owner — without constant verbal status updates.
+</Tip>
+
+## Handing Off a Ticket
+
+When a ticket changes ownership between team members — a shift handoff, a role change, or an escalation — a good handoff prevents context from being lost.
+
+<Steps>
+  <Step title="Add a handoff comment">
+    Before reassigning, write a comment summarizing: current status, what's been tried, what's working, what still needs to happen, and any important context the new owner should know. Be specific.
+  </Step>
+  <Step title="Attach relevant files">
+    Upload any log files, screenshots, or runbook notes collected during your work on the ticket so the new owner has everything in one place.
+  </Step>
+  <Step title="Reassign the ticket">
+    Update the **Assignee** field to the new owner. They'll receive a notification and will see your handoff comment immediately.
+  </Step>
+  <Step title="Offer a quick sync">
+    For complex or ongoing incidents, supplement the written handoff with a short verbal or video sync if timing allows. A 5-minute call transfers nuance that written notes miss.
+  </Step>
+</Steps>
+
+<Tip>
+  Write handoff comments as if the new owner has never seen the ticket before, even if they've been watching it. Watching a ticket gives you notifications — it doesn't guarantee you've read every update carefully.
+</Tip>
+
+## Activity Log
+
+Every change made to a ticket is recorded in the **Activity Log**, accessible at the bottom of the ticket detail panel below the comments. The Activity Log is append-only and cannot be edited or deleted.
+
+The Activity Log captures:
+
+- Ticket creation (who created it, when)
+- Field changes — title, description, priority, category, assignee, due date, tags
+- Status transitions — who moved it and when
+- Attachments added or removed
+- Watchers added or removed
+- Comments posted (with full text)
+- @mentions
+
+Use the Activity Log to reconstruct the full timeline of an incident, understand why a ticket sat idle, see who made a controversial priority change, or produce a factual record for a post-mortem. It is the authoritative history of everything that happened on a ticket.
+
+<Tip>
+  When writing a post-mortem, open the coordination ticket's Activity Log and use it as your incident timeline. The timestamps and actor names are already there — you just need to add the narrative context around the key events.
+</Tip>

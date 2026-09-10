@@ -1,0 +1,122 @@
+---
+title: "Set Up Team-Wide Notification Rules in Resolve"
+sidebarTitle: "Notification Rules"
+description: "Admins can configure organization-wide notification rules in Resolve to ensure the right people are automatically alerted on critical tickets."
+---
+
+This page covers organization-wide notification rules — a feature available exclusively to Resolve Admins. While individual team members can manage their own personal notification preferences, notification rules let you define system-level alerts that fire automatically for the right people regardless of any individual's personal settings. Use them to ensure critical infrastructure events are never missed.
+
+## What Notification Rules Are
+
+Notification rules are standing instructions that Resolve evaluates continuously against all ticket activity. When a ticket event matches a rule's conditions, Resolve immediately sends an alert to the configured recipients through the chosen channel. Unlike personal preferences, these rules operate at the organization level and cannot be suppressed by individual users.
+
+<Note>
+  Notification rules are separate from personal notification preferences. A rule-triggered alert will be sent even if the recipient has turned off notifications for that event type in their personal settings.
+</Note>
+
+## Rule Anatomy
+
+Every notification rule is made up of three components:
+
+- **Trigger condition** — The event and filter criteria that activate the rule (e.g., "a ticket is created" + "priority = Critical")
+- **Recipient(s)** — Who receives the alert: a specific user, a role (all Admins), or a team (the On-Call team)
+- **Channel** — How the alert is delivered: via email or as an in-app notification
+
+Together, these three components define exactly *when* an alert fires, *who* it reaches, and *how* they receive it.
+
+## Common Rule Examples
+
+Here are three rule configurations that most infrastructure teams find immediately useful:
+
+<CardGroup cols={1}>
+  <Card title="Critical ticket created → #ops channel" icon="triangle-exclamation">
+    **Trigger:** Ticket created, Priority = Critical  
+    **Recipients:** Ops Team  
+    **Channel:** In-app notification  
+
+    Ensures your entire ops team is aware of any critical infrastructure issue the moment it's logged.
+  </Card>
+  <Card title="Overdue ticket escalation → Team lead" icon="clock">
+    **Trigger:** Ticket overdue by 24 hours, Status ≠ Done / Closed  
+    **Recipients:** Team Lead role  
+    **Channel:** Email  
+
+    Automatically escalates stalled tickets to the team lead so nothing falls through the cracks during busy periods.
+  </Card>
+  <Card title="Server category ticket → All Admins" icon="server">
+    **Trigger:** Ticket created or updated, Category = Server  
+    **Recipients:** All Admins  
+    **Channel:** In-app notification  
+
+    Keeps administrators informed of all server-related tickets without requiring them to watch the board constantly.
+  </Card>
+</CardGroup>
+
+## Creating a New Notification Rule
+
+<Steps>
+  <Step title="Go to Settings → Notification Rules">
+    From the main navigation, click **Settings**, then select **Notification Rules** from the left sidebar.
+  </Step>
+  <Step title="Click 'Add Rule'">
+    Click the **+ Add Rule** button in the top-right corner of the Notification Rules page. A rule configuration panel will open.
+  </Step>
+  <Step title="Set the trigger">
+    Choose an **Event Type** from the dropdown. Available events include:
+
+    - Ticket created
+    - Ticket status changed
+    - Ticket assigned
+    - Comment added
+    - Ticket overdue
+    - Ticket priority changed
+
+    Then add one or more **Conditions** to narrow when the rule fires (e.g., Priority = Critical, Category = Network, Overdue by = 24 hours).
+  </Step>
+  <Step title="Set the recipients">
+    Choose who receives the alert. You can select:
+
+    - **Specific users** — search by name or email
+    - **By role** — All Admins, All Members
+    - **By team** — any team you've configured under Settings → Teams
+  </Step>
+  <Step title="Choose the channel">
+    Select one or both delivery channels:
+
+    - **Email** — sends a formatted email to the recipient's registered address
+    - **In-app** — displays a notification in the Resolve notification bell
+  </Step>
+  <Step title="Save the rule">
+    Give your rule a descriptive name (e.g., "Critical ticket — ops alert"), then click **Save Rule**. The rule becomes active immediately.
+  </Step>
+</Steps>
+
+<Tip>
+  Use descriptive rule names that explain the trigger and the audience — for example, "Server ticket created → Admins (in-app)". This makes your rules list much easier to audit and maintain over time.
+</Tip>
+
+## Managing Existing Rules
+
+From the **Notification Rules** list, you can perform the following actions on any rule:
+
+- **Edit** — Click the **pencil icon** to modify any part of the rule. Changes take effect immediately on save.
+- **Disable** — Toggle the rule off without deleting it. Disabled rules are grayed out in the list and will not fire until re-enabled.
+- **Delete** — Click the **trash icon** to permanently remove a rule. This action cannot be undone.
+
+<Tip>
+  When testing a new rule configuration, disable it temporarily rather than deleting it. This lets you re-enable it quickly if needed without rebuilding it from scratch.
+</Tip>
+
+## Rule Priority and Conflict Resolution
+
+When multiple rules match the same ticket event, Resolve fires all matching rules — recipients may receive more than one notification for a single event. Rules do not cancel or override each other.
+
+To avoid redundant alerts:
+
+- Use specific conditions to narrow each rule's scope
+- Consolidate rules that target the same audience with similar triggers
+- Regularly audit your rules list and remove or merge overlapping rules
+
+<Warning>
+  Too many notification rules — especially broad ones with no conditions — will flood your team's inboxes and in-app feeds. When recipients start ignoring or filtering out Resolve alerts, you lose the early-warning value that notification rules are meant to provide. Audit your rules regularly and favor targeted, high-signal rules over broad catch-all ones.
+</Warning>

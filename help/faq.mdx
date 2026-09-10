@@ -1,0 +1,129 @@
+---
+title: "Frequently Asked Questions About Resolve"
+sidebarTitle: "FAQ"
+description: "Find quick answers to the most common questions about using Resolve for infrastructure ticket management and Kanban workflows."
+---
+
+Whether you're just getting started with Resolve or looking for a quick answer to a specific workflow question, this page covers the most common things our users ask about. Browse the questions below — if you don't find what you're looking for, head over to the [Troubleshooting](/help/troubleshooting) guide or reach out to your Resolve administrator.
+
+<AccordionGroup>
+
+  <Accordion title="How do I create my first ticket?">
+    Creating a ticket in Resolve takes just a few seconds:
+
+    1. From the Kanban board, click the **+ New Ticket** button in the top-right corner (or press **N** on your keyboard as a shortcut).
+    2. Enter a **title** that clearly describes the issue.
+    3. Fill in optional details — category, priority, assignee, due date, and description.
+    4. Click **Create Ticket**.
+
+    Your new ticket will appear in the **Open** column on the board immediately. You can also create tickets directly from within a column by clicking the **+** icon at the top of that column — the ticket will be placed there automatically.
+  </Accordion>
+
+  <Accordion title="How do I change the status of a ticket?">
+    There are two ways to move a ticket to a different status:
+
+    - **Drag and drop** — On the Kanban board, grab the ticket card and drag it into the target column.
+    - **Inside the ticket** — Open the ticket and use the **Status** dropdown at the top of the detail panel to select a new status.
+
+    Both methods update the status instantly and log the change in the ticket's activity history, including who made the change and when.
+  </Accordion>
+
+  <Accordion title="Can I assign a ticket to multiple people?">
+    Currently, each ticket can have one primary **Assignee**. If a ticket involves work from multiple team members, we recommend:
+
+    - Assigning the ticket to the person leading the work
+    - Using **@mentions** in the comments to loop in other teammates
+    - Adding additional stakeholders as **Watchers** (available from the ticket detail panel under **Watchers**) so they receive updates without being the primary owner
+
+    Watcher support means everyone who needs to stay informed will still receive notifications when the ticket is updated.
+  </Accordion>
+
+  <Accordion title="What's the difference between Closed and Done?">
+    Both statuses indicate that a ticket is no longer active, but they mean slightly different things:
+
+    - **Done** — The work described in the ticket has been completed successfully. Use this when the issue is fully resolved and the outcome is positive.
+    - **Closed** — The ticket has been closed without completion. This is typically used for tickets that were created in error, turned out to be duplicates, or are no longer relevant for any reason.
+
+    Your Resolve Admin may have customized these column names — check with them if you're unsure which status to use for a specific outcome.
+  </Accordion>
+
+  <Accordion title="How do I stop receiving email notifications?">
+    You can adjust your email notification preferences at any time:
+
+    1. Click your **profile avatar** in the top-right corner and select **Notification Preferences**.
+    2. Toggle off any event types you don't want to receive emails for.
+    3. To stop all email notifications, toggle off **Email Notifications** at the top of the page.
+    4. Click **Save Preferences**.
+
+    Note that organization-wide notification rules configured by your Admin may still send you emails for critical events, regardless of your personal preferences. If you believe you're receiving notifications you shouldn't be, contact your Resolve administrator.
+  </Accordion>
+
+  <Accordion title="Can I customize the Kanban columns?">
+    Yes — Admins can fully customize the board's columns. If you're an Admin:
+
+    1. Open the Kanban board and click **Settings → Columns**.
+    2. From there you can add new columns, rename existing ones, reorder them by drag and drop, or remove columns you don't need.
+
+    If you're a Member or Viewer, you'll need to ask your Resolve Admin to make column changes on your behalf. See the [Board Settings](/configuration/board-settings) guide for full instructions.
+  </Accordion>
+
+  <Accordion title="How do I search for a specific ticket?">
+    Resolve gives you several ways to find a ticket quickly:
+
+    - **Global search** — Click the **search bar** at the top of any page (or press **/** on your keyboard) and type a keyword, ticket ID, or assignee name.
+    - **Board filters** — On the Kanban board, use the **Filter** button to narrow cards by category, priority, assignee, due date, or status.
+    - **List view** — Switch to the List view for a sortable, searchable table of all tickets. This is especially useful for finding tickets that have been archived or closed.
+
+    Search results include ticket titles, descriptions, and comments, so you can find a ticket even if you only remember a phrase from a comment thread.
+  </Accordion>
+
+  <Accordion title="What happens when I delete a ticket?">
+    Deleting a ticket permanently removes it from Resolve, including its comments, attachments, and full activity history. This action cannot be undone.
+
+    Only **Admins** can delete tickets. If you are a Member and want to close out a ticket that's no longer needed, move it to the **Closed** column instead — this keeps the record intact for auditing purposes without cluttering the active board.
+
+    If you need a ticket permanently deleted and don't have Admin access, contact your Resolve administrator.
+  </Accordion>
+
+  <Accordion title="Can I set recurring tickets for regular maintenance?">
+    Yes. Resolve supports recurring ticket schedules for routine maintenance tasks like weekly backups, monthly patch cycles, or quarterly audits.
+
+    To set up a recurring ticket:
+
+    1. Open any existing ticket (or create a new one) and click **More Options → Make Recurring**.
+    2. Set the recurrence frequency: daily, weekly, monthly, or a custom interval.
+    3. Choose a **start date** and optionally an **end date** or total number of occurrences.
+    4. Click **Save**.
+
+    Each recurrence generates a fresh ticket with the same title, description, category, and assignee. Recurring tickets appear on the board just like regular tickets and don't count as separate scheduled items.
+  </Accordion>
+
+  <Accordion title="How do I export ticket data?">
+    You can export ticket data as a CSV file for reporting, archiving, or importing into other tools:
+
+    1. Switch to **List View** using the view toggle at the top of the board.
+    2. Use filters to narrow your export to a specific date range, category, status, or assignee if needed.
+    3. Click **Export → Export to CSV** in the toolbar.
+    4. The file will download to your browser's default downloads folder.
+
+    Admins can also access broader export options under **Settings → Data Export**, including full organizational data exports with custom date ranges.
+  </Accordion>
+
+  <Accordion title="Who can change user roles?">
+    Only **Admins** can assign or change user roles in Resolve. If you need your role updated — for example, to gain access to board settings or to be downgraded after a role change — you'll need to ask your organization's Resolve administrator.
+
+    Admins can manage roles from **Settings → Team → Members**. Full instructions are available in the [User Roles](/configuration/user-roles) guide.
+  </Accordion>
+
+  <Accordion title="How do I @mention a teammate in a comment?">
+    To mention a teammate in a ticket comment:
+
+    1. Open the ticket and scroll to the **Comments** section.
+    2. Click into the comment box and type **@** followed by the person's name.
+    3. Select the correct person from the autocomplete dropdown that appears.
+    4. Finish your comment and click **Post**.
+
+    The mentioned user will receive an in-app notification (and an email, if they have that preference enabled) alerting them that they've been mentioned. You can mention multiple teammates in a single comment.
+  </Accordion>
+
+</AccordionGroup>
