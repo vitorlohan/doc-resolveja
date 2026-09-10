@@ -1,5 +1,5 @@
 ---
-title: "Automatic Notifications in Resolve"
+title: "How Resolve Notifications Work: Triggers and Channels"
 sidebarTitle: "Notifications"
 description: "Resolve automatically notifies the right people when tickets are created, updated, assigned, or reach critical status — keeping your team in sync."
 ---
@@ -11,28 +11,28 @@ Resolve's notification system keeps your team informed without requiring anyone 
 Resolve sends notifications based on specific events in the ticket lifecycle. Each trigger targets the people who are most relevant to that event, so you receive updates that are actually actionable for you.
 
 <CardGroup cols={2}>
-  <Card title="Ticket Created" icon="circle-plus">
+  <Card title="Ticket Created" icon="circle-plus" href="configuration/notification-rules">
     Sent to the team lead or on-call assignee when a new ticket is opened in a category they own.
   </Card>
-  <Card title="Ticket Assigned" icon="user-check">
+  <Card title="Ticket Assigned" icon="user-check" href="configuration/notification-rules">
     Sent to the assignee the moment a ticket is assigned or reassigned to them.
   </Card>
-  <Card title="Status Changed" icon="arrow-right-arrow-left">
+  <Card title="Status Changed" icon="arrow-right-arrow-left" href="configuration/notification-rules">
     Sent to the reporter and watchers whenever a ticket moves to a new status column.
   </Card>
-  <Card title="Comment Added" icon="message-circle">
+  <Card title="Comment Added" icon="message-circle" href="configuration/notification-rules">
     Sent to the assignee, reporter, and any `@mentioned` users when a new comment is posted.
   </Card>
-  <Card title="Due Date Approaching" icon="clock">
+  <Card title="Due Date Approaching" icon="clock" href="configuration/notification-rules">
     Sent to the assignee 24 hours before a ticket's due date if it has not yet reached **Done**.
   </Card>
-  <Card title="Ticket Overdue" icon="triangle-alert">
+  <Card title="Ticket Overdue" icon="triangle-alert" href="configuration/notification-rules">
     Sent to the assignee and their team lead when a ticket passes its due date without resolution.
   </Card>
-  <Card title="Ticket Resolved" icon="circle-check">
+  <Card title="Ticket Resolved" icon="circle-check" href="configuration/notification-rules">
     Sent to the reporter when the ticket moves to **Done**, confirming the issue has been addressed.
   </Card>
-  <Card title="Critical Priority Set" icon="siren">
+  <Card title="Critical Priority Set" icon="siren" href="configuration/notification-rules">
     Sent immediately to the assignee and on-call contact when a ticket's priority is set or escalated to **Critical**.
   </Card>
 </CardGroup>
@@ -48,10 +48,10 @@ Resolve sends notifications based on specific events in the ticket lifecycle. Ea
 Resolve delivers notifications through two channels. You can use one or both, depending on how your team works.
 
 <CardGroup cols={2}>
-  <Card title="In-App Notifications" icon="bell">
+  <Card title="In-App Notifications" icon="bell" href="guides/notifications-setup">
     Notifications appear in the bell icon in the top navigation bar. A badge count shows how many unread notifications you have. Clicking a notification takes you directly to the relevant ticket. All in-app notifications are retained for 90 days.
   </Card>
-  <Card title="Email Notifications" icon="mail">
+  <Card title="Email Notifications" icon="mail" href="guides/notifications-setup">
     Resolve sends notification emails to the address associated with your account. Each email includes the ticket title, a summary of what changed, and a direct link to open the ticket in Resolve. Email notifications can be turned off per-trigger in your preferences.
   </Card>
 </CardGroup>

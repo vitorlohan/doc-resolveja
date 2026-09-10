@@ -1,5 +1,5 @@
 ---
-title: "Set Up Team-Wide Notification Rules in Resolve"
+title: "Configure and Manage Notification Rules in Resolve"
 sidebarTitle: "Notification Rules"
 description: "Admins can configure organization-wide notification rules in Resolve to ensure the right people are automatically alerted on critical tickets."
 ---
@@ -29,21 +29,21 @@ Together, these three components define exactly *when* an alert fires, *who* it 
 Here are three rule configurations that most infrastructure teams find immediately useful:
 
 <CardGroup cols={1}>
-  <Card title="Critical ticket created → #ops channel" icon="triangle-exclamation">
+  <Card title="Critical ticket created → Ops team" icon="triangle-exclamation" href="/configuration/notification-rules">
     **Trigger:** Ticket created, Priority = Critical  
     **Recipients:** Ops Team  
     **Channel:** In-app notification  
 
     Ensures your entire ops team is aware of any critical infrastructure issue the moment it's logged.
   </Card>
-  <Card title="Overdue ticket escalation → Team lead" icon="clock">
+  <Card title="Overdue ticket escalation → Team lead" icon="clock" href="/guides/notifications-setup">
     **Trigger:** Ticket overdue by 24 hours, Status ≠ Done / Closed  
     **Recipients:** Team Lead role  
     **Channel:** Email  
 
     Automatically escalates stalled tickets to the team lead so nothing falls through the cracks during busy periods.
   </Card>
-  <Card title="Server category ticket → All Admins" icon="server">
+  <Card title="Server category ticket → All Admins" icon="server" href="/concepts/notifications">
     **Trigger:** Ticket created or updated, Category = Server  
     **Recipients:** All Admins  
     **Channel:** In-app notification  
