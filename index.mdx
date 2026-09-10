@@ -1,38 +1,80 @@
 ---
-title: "Resolve: Infrastructure Ticket Management for Ops Teams"
-sidebarTitle: "Home"
-description: "Resolve is your team's hub for managing infrastructure and maintenance tickets on a visual Kanban board with automatic notifications."
+title: "Resolve Já — Guia da plataforma"
+sidebarTitle: "Bem-vindo"
+description: "A plataforma de chamados de infraestrutura e manutenção: abertura, acompanhamento em tempo real, atendimento no quadro e checklists das equipes."
 ---
+<Frame>
+  <img src="/logo/resolveja.webp" alt="logo" width="200" />
+</Frame>
 
-Resolve brings your entire infrastructure and maintenance workflow into one place. Whether you're tracking a server outage, scheduling routine maintenance, or coordinating across teams, Resolve gives you the visibility and automation you need to keep every issue moving from open to resolved — without anything falling through the cracks.
+
+O **Resolve Já** é a plataforma interna de chamados de infraestrutura e manutenção. Qualquer colaborador abre um chamado descrevendo a ocorrência, a equipe responsável é avisada na hora por WhatsApp, e-mail e notificação no celular, e o atendimento acontece em um quadro compartilhado que todos acompanham em tempo real.
+
+Este guia cobre os dois lados da plataforma: quem **abre** chamados e quem **atende**.
+
+{/* SCREENSHOT: tela do quadro de chamados com as três colunas */}
 
 <CardGroup cols={2}>
-  <Card title="Introduction" icon="book-open" href="/introduction">
-    Learn what Resolve is, who it's for, and how it helps your team manage infrastructure issues efficiently.
+  <Card title="Como funciona" icon="route" href="/comecar/como-funciona">
+    O caminho completo de um chamado, da abertura à avaliação.
   </Card>
-  <Card title="Quickstart" icon="bolt" href="/quickstart">
-    Get up and running in minutes — log in, create your first ticket, and start tracking it on the board.
+  <Card title="Criar minha conta" icon="user-plus" href="/comecar/criar-conta">
+    Cadastro em um minuto para começar a abrir chamados.
   </Card>
-  <Card title="Account Setup" icon="circle-user" href="/getting-started/account-setup">
-    Configure your profile, notification preferences, and timezone before you start managing tickets.
+  <Card title="Abrir um chamado" icon="ticket" href="/chamados/abrir-chamado">
+    Os campos do formulário, as fotos e o número de protocolo.
   </Card>
-  <Card title="Creating Tickets" icon="ticket" href="/guides/creating-tickets">
-    Learn how to open infrastructure tickets with the right fields, priority levels, and assignments.
+  <Card title="Atender um chamado" icon="screwdriver-wrench" href="/atendimento/pegar-chamado">
+    Passo a passo de quem executa o serviço no quadro.
+  </Card>
+  <Card title="Executar o checklist" icon="list-check" href="/checklists/executar-checklist">
+    Marcar atividades do dia, observar e justificar pendências.
+  </Card>
+  <Card title="FAQ - Dúvidas frequentes" icon="circle-question" href="/ajuda/duvidas-frequentes">
+    As perguntas que mais aparecem no dia a dia.
   </Card>
 </CardGroup>
 
-## Get started in three steps
+## Por onde começar
 
-New to Resolve? Follow these steps to go from zero to managing your first ticket in just a few minutes.
+Depende do seu papel na operação:
 
-<Steps>
-  <Step title="Log in to Resolve">
-    Open Resolve in your browser and sign in with your organization credentials. If this is your first time, check your inbox for an invitation email from your administrator.
-  </Step>
-  <Step title="Create your first ticket">
-    Click **New Ticket** from the Kanban board, fill in the title, description, priority, and assignee, then submit. Your ticket appears instantly in the **To Do** column.
-  </Step>
-  <Step title="Track progress on the Kanban board">
-    Drag your ticket across columns as work progresses — from **To Do** to **In Progress** to **Done**. Resolve automatically notifies the assigned team member at each stage.
-  </Step>
-</Steps>
+<Tabs>
+  <Tab title="Vou abrir chamados">
+    Você é um solicitante: precisa de uma lâmpada trocada, um ar-condicionado consertado, uma manutenção no galpão.
+
+    <Steps>
+      <Step title="Crie sua conta">
+        Informe usuário, e-mail, senha, departamento e CD. Veja [Criar conta](/comecar/criar-conta).
+      </Step>
+      <Step title="Abra o chamado">
+        Descreva a ocorrência e anexe fotos. Veja [Abrir um chamado](/chamados/abrir-chamado).
+      </Step>
+      <Step title="Acompanhe até a conclusão">
+        Siga o andamento em **Meus chamados** e avalie o atendimento no final. Veja [Acompanhar](/chamados/acompanhar-chamado).
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Vou atender chamados">
+    Você é membro de uma equipe técnica: elétrica, conservação, CFTV, gerador, ar-condicionado, bombas, obra ou incêndio.
+
+    <Steps>
+      <Step title="Entre na plataforma">
+        Sua conta é criada pelo administrador e já vem vinculada à sua equipe. Veja [Entrar na plataforma](/comecar/entrar).
+      </Step>
+      <Step title="Pegue um chamado no quadro">
+        Leia os detalhes, defina a prioridade e assuma o atendimento. Veja [Pegar um chamado](/atendimento/pegar-chamado).
+      </Step>
+      <Step title="Conclua com foto e observação">
+        Toda conclusão exige o registro do que foi feito. Veja [Concluir um chamado](/atendimento/concluir-chamado).
+      </Step>
+      <Step title="Faça o checklist do dia">
+        As atividades programadas da sua equipe. Veja [Executar o checklist](/checklists/executar-checklist).
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+<Note>
+  O Resolve Já também está disponível como aplicativo Android, com notificações no celular. Veja [Aplicativo no celular](/comecar/aplicativo).
+</Note>

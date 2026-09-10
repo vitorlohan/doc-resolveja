@@ -1,0 +1,86 @@
+---
+title: "Problemas comuns e mensagens da plataforma"
+sidebarTitle: "Problemas comuns"
+description: "O que significa cada mensagem de erro do Resolve Já e o que fazer em cada situação."
+---
+
+Esta página reúne as mensagens que a plataforma mostra e o que fazer em cada caso.
+
+## Acesso e login
+
+| Mensagem | Significa | O que fazer |
+|---|---|---|
+| **Servidor respondeu 401** | Usuário ou senha incorretos. | Confira espaços sobrando. Tente entrar pelo e-mail em vez do usuário. |
+| **Sem resposta do servidor (rede/CORS)** | A plataforma não alcançou o servidor. | Verifique a conexão. No aplicativo, confirme rede da empresa ou VPN. A mensagem mostra o endereço tentado — informe ao suporte. |
+| **Acesso negado** | Sua conta não tem a permissão daquela tela. | A tela informa qual permissão falta. Leve essa informação ao administrador. |
+| **Este nome de usuário já está em uso** | Login já cadastrado. | Escolha outra combinação, como `joao.s` ou `joao.silva2`. |
+| **Já existe uma conta com este e-mail** | Você já tem cadastro. | Faça login. Se não lembra a senha, use **Esqueci minha senha**. |
+
+## Abertura de chamado
+
+| Mensagem | O que fazer |
+|---|---|
+| **Informe o local da ocorrência** | Preencha o campo de local. |
+| **Selecione a equipe responsável** | Escolha a equipe no seletor. |
+| **Equipe inválida ou inativa** | A equipe foi desativada. Escolha outra e avise a gestão. |
+| **Não foi possível abrir o chamado** | Falha de comunicação. Confira a conexão e tente novamente — o texto que você digitou permanece na tela. |
+
+### A foto não aparece depois de selecionada
+
+A imagem foi descartada. Causas possíveis:
+
+- o arquivo não é imagem (PDF, vídeo e planilha não são aceitos);
+- a imagem passou de **5 MB** mesmo após a compressão automática;
+- você já tinha **5 imagens** anexadas — o limite por chamado.
+
+## Atendimento
+
+| Mensagem | Significa |
+|---|---|
+| **Este chamado já foi pego por alguém da equipe** | Outra pessoa assumiu primeiro. Escolha outro chamado. |
+| **Apenas quem pegou o chamado pode abandoná-lo** | Você não é o responsável. Só o responsável ou a supervisão agem no chamado. |
+| **Sua conta não está vinculada a um membro de equipe** | Sua conta não tem um membro de equipe associado. O administrador precisa fazer esse vínculo em **Equipes → Membros**. |
+| **Este chamado já está concluído** | Alguém concluiu enquanto a sua tela estava aberta. Feche e atualize o quadro. |
+| **Membro inválido para esta equipe** | O membro selecionado não pertence à equipe do chamado. |
+| **Chamado concluído. Edição bloqueada** | Chamados concluídos não aceitam alterações. Só a supervisão pode reabrir. |
+
+### Não consigo concluir o chamado
+
+Os quatro campos são obrigatórios: prioridade, quem atendeu, observação e foto. A mensagem aponta qual está faltando. Veja [Concluir um chamado](/atendimento/concluir-chamado).
+
+## Checklists
+
+| Mensagem | O que fazer |
+|---|---|
+| **Selecione o nome do membro antes de marcar** | Supervisão precisa escolher o membro antes de qualquer lançamento. |
+| **Somente um administrador pode desmarcar** | Membros não desmarcam itens. Peça ao administrador. |
+| **Nenhum checklist cadastrado para esta equipe** | Não há checklist agendado para a data. Tente outra data ou confirme com a gestão. |
+| **Selecione uma equipe para ver os checklists** | Supervisão precisa escolher a equipe primeiro. |
+| **Falha ao gerar PDF** | Tente de novo. Se persistir, reduza o período do relatório. |
+
+## A tela não atualiza
+
+O quadro, o acompanhamento e o checklist se atualizam sozinhos. Se algo parece congelado:
+
+<Steps>
+  <Step title="Recarregue a página">
+    No navegador, `F5`. No aplicativo, feche e abra de novo.
+  </Step>
+  <Step title="Verifique a conexão">
+    A atualização em tempo real depende de uma conexão ativa com o servidor. Em rede instável, ela pode cair silenciosamente.
+  </Step>
+  <Step title="Confirme se você está no filtro certo">
+    No quadro, um filtro de período, prioridade ou responsável ainda aplicado pode estar escondendo os chamados. Clique em **Limpar**.
+  </Step>
+  <Step title="No checklist, confira a data">
+    A tela mostra apenas os checklists da data selecionada.
+  </Step>
+</Steps>
+
+## Ainda com problema
+
+Se nada acima resolveu, fale com o suporte. Tenha em mãos o número de protocolo, a mensagem exata que apareceu e o que você estava tentando fazer.
+
+<Card title="Falar com o suporte" icon="headset" href="/ajuda/suporte">
+  Os canais de atendimento e o que informar em cada caso.
+</Card>

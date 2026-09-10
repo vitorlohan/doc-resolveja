@@ -1,0 +1,76 @@
+---
+title: "Entrar na plataforma e recuperar a senha"
+sidebarTitle: "Entrar"
+description: "Como fazer login com usuário ou e-mail, salvar o acesso no aparelho e redefinir a senha quando você esquecer."
+---
+
+A tela de login é a mesma para todo mundo: solicitantes, equipes e administradores. O que muda é a tela em que você cai depois de entrar.
+
+{/* SCREENSHOT: tela "Painel de Login" */}
+
+## Fazer login
+
+<Steps>
+  <Step title="Informe usuário ou e-mail">
+    Os dois funcionam. Não precisa se preocupar com maiúsculas — o campo converte para minúsculas automaticamente.
+  </Step>
+  <Step title="Digite a senha">
+    Use o ícone de olho para conferir o que digitou.
+  </Step>
+  <Step title="Marque Lembrar meu acesso, se quiser">
+    O acesso fica salvo **naquele aparelho** e o formulário já vem preenchido na próxima vez.
+
+    <Warning>
+      Não marque essa opção em computadores compartilhados.
+    </Warning>
+  </Step>
+  <Step title="Clique em Entrar">
+    A plataforma leva você direto para a primeira tela do seu perfil.
+  </Step>
+</Steps>
+
+## Onde você cai depois de entrar
+
+O destino depende das suas permissões, não do tipo de conta:
+
+| Seu acesso | Tela inicial |
+|---|---|
+| Solicitante | **Abrir chamado** |
+| Membro de equipe | **Quadro** de chamados da sua equipe |
+| Supervisão | **Quadro**, começando pela seleção de equipe |
+| Administrador | Primeira tela disponível no menu |
+
+## Esqueci minha senha
+
+<Steps>
+  <Step title="Clique em Esqueci minha senha">
+    O link fica ao lado de **Lembrar meu acesso**.
+  </Step>
+  <Step title="Informe o e-mail da conta">
+    Precisa ser o mesmo e-mail que você usou no cadastro.
+  </Step>
+  <Step title="Abra o link recebido">
+    Você recebe um e-mail com um link de redefinição. Confira também a caixa de **spam**.
+  </Step>
+  <Step title="Defina a nova senha">
+    As mesmas regras do cadastro: mínimo 6 caracteres, sem espaços.
+  </Step>
+</Steps>
+
+<Info>
+  A mensagem de confirmação aparece mesmo que o e-mail não exista no sistema. Isso é proposital: evita que alguém descubra quais e-mails têm conta na plataforma. Se o link não chegar, confirme com o administrador qual e-mail está cadastrado na sua conta.
+</Info>
+
+## Não consigo entrar
+
+<AccordionGroup>
+  <Accordion title="Servidor respondeu 401: credenciais inválidas">
+    Usuário ou senha errados. Confira se não há espaço sobrando e tente entrar pelo e-mail em vez do usuário.
+  </Accordion>
+  <Accordion title="Sem resposta do servidor (rede/CORS)">
+    A plataforma não conseguiu falar com o servidor. Verifique sua conexão. Se estiver no aplicativo, confirme se você está na rede da empresa ou na VPN. A mensagem mostra o endereço da API que foi tentado — informe esse endereço ao suporte.
+  </Accordion>
+  <Accordion title="Entrei, mas aparece Acesso negado">
+    Sua conta existe, mas não tem a permissão daquela tela. A mensagem mostra qual permissão falta — leve essa informação ao administrador.
+  </Accordion>
+</AccordionGroup>

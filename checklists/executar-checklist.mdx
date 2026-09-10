@@ -1,0 +1,104 @@
+---
+title: "Executar o checklist da equipe"
+sidebarTitle: "Executar checklist"
+description: "Passo a passo para marcar as atividades do dia, registrar observações e justificar itens que não foram realizados."
+---
+
+O checklist é a lista de atividades programadas da sua equipe para um dia. Diferente dos chamados — que nascem de um pedido — o checklist é rotina: aquilo que precisa ser verificado ou executado independentemente de alguém pedir.
+
+{/* SCREENSHOT: tela Checklist com itens marcados e um item com pendência justificada */}
+
+## Onde encontrar
+
+No menu, acesse **Checklist**. A tela tem duas abas:
+
+| Aba | Para que serve |
+|---|---|
+| **Hoje** | Executar o checklist — marcar itens, observar e justificar. |
+| **Histórico** | Consultar dias anteriores e gerar o relatório do período. |
+
+Você começa na aba **Hoje**, já com a data de hoje carregada.
+
+## Passo a passo
+
+<Steps>
+  <Step title="Confirme a data">
+    O campo **Data** já vem com o dia de hoje. Para lançar um dia anterior, escolha a data e clique em **Aplicar**.
+
+    <Note>
+      Aparecem apenas os checklists **agendados** para a data escolhida. Se a tela mostrar "Nenhum checklist cadastrado para esta equipe", ou não há checklist da sua equipe naquele dia, ou o administrador ainda não agendou a data.
+    </Note>
+  </Step>
+  <Step title="Identifique seu nome, se necessário">
+    - **Membro de equipe**: seu nome é registrado automaticamente. Não há nada a selecionar.
+    - **Supervisão ou administrador**: é preciso escolher a **Equipe** e o **Membro** antes de marcar qualquer coisa. A tela avisa: *Selecione o nome do membro para registrar quem realizou cada atividade.*
+
+    <Warning>
+      Toda marcação fica registrada com nome, data e hora. É por isso que o nome é obrigatório antes de qualquer lançamento.
+    </Warning>
+  </Step>
+  <Step title="Marque os itens realizados">
+    Cada checklist aparece como um bloco, com o título, o tipo e um contador no canto (`3/8` significa três de oito itens concluídos).
+
+    Toque no quadrado à esquerda do item. Ele fica azul com um visto, a descrição ganha um risco e aparece a linha **Feito por [seu nome] · data e hora**.
+  </Step>
+  <Step title="Adicione observação, quando houver algo a dizer">
+    Em itens já marcados, aparece o link **+ Adicionar observação**. Use quando a atividade foi feita, mas com alguma ressalva.
+
+    Exemplos:
+    - `Feito parcialmente — metade do corredor, o resto amanhã.`
+    - `Executado, mas o equipamento está fazendo ruído. Vou abrir chamado.`
+
+    A observação aparece em uma tarja amarela no item, com seu nome e o horário.
+  </Step>
+  <Step title="Justifique o que não foi feito">
+    Em itens **não marcados**, aparece o link **+ Justificar pendência**. Use quando a atividade não pôde ser executada.
+
+    Exemplos:
+    - `Não consegui executar porque o setor estava em operação.`
+    - `Faltou material — solicitado ao almoxarifado.`
+
+    A pendência aparece em uma tarja vermelha no item, com seu nome e o horário.
+
+    <Tip>
+      Item não feito **sem justificativa** entra no relatório como **Não iniciado** — o pior resultado possível. Justificar não é confessar falha: é mostrar que houve verificação e o motivo do impedimento.
+    </Tip>
+  </Step>
+</Steps>
+
+## Os três resultados possíveis de um item
+
+| Resultado | Como acontece | Como aparece no relatório |
+|---|---|---|
+| **Concluído** | Você marcou o item. | Concluído |
+| **Pendente (justificado)** | Você não marcou, mas registrou o motivo. | Pendente |
+| **Não iniciado** | Você não marcou e não justificou. | Não iniciado |
+
+## Não consigo desmarcar um item
+
+<Warning>
+  Membros de equipe **não podem desmarcar** um item já marcado. Ao tentar, a mensagem é: *Somente um administrador pode desmarcar.*
+</Warning>
+
+Isso protege o registro: uma marcação com nome e horário é um comprovante de que a atividade foi verificada. Se marcou errado, peça ao administrador para desmarcar.
+
+Pelo mesmo motivo, **observações e pendências não podem ser editadas pelo membro** depois de salvas — só quem gerencia checklists consegue alterar (o link **editar** aparece apenas para esse perfil).
+
+## Tipos de checklist
+
+| Tipo | Significado |
+|---|---|
+| **Padrão** | Rotina fixa, repetida nas datas agendadas. |
+| **Diversificado** | Atividades que variam conforme o período ou a demanda. |
+
+O tipo aparece como uma etiqueta ao lado do título do checklist. Ele não muda a forma de executar — serve para organizar e separar os dois no relatório.
+
+## Tempo real
+
+Se dois membros da equipe estão executando o mesmo checklist ao mesmo tempo, a tela de cada um se **atualiza sozinha** quando o outro marca um item. Não há risco de marcar em duplicidade nem de perder um lançamento do colega.
+
+## Próximo passo
+
+<Card title="Histórico de checklists" icon="clock-rotate-left" href="/checklists/historico-de-checklists">
+  Consultar dias anteriores, ver o desempenho do período e exportar em PDF.
+</Card>

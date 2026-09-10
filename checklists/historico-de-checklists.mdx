@@ -1,0 +1,82 @@
+---
+title: "Histórico e relatório de checklists"
+sidebarTitle: "Histórico de checklists"
+description: "Como consultar checklists de dias anteriores, entender os indicadores do período e exportar o relatório em PDF."
+---
+
+A aba **Histórico** mostra o que foi executado em um intervalo de datas. É onde se responde a perguntas como "a equipe fez o checklist na semana passada?" e "quais itens ficam sempre pendentes?".
+
+{/* SCREENSHOT: aba Histórico com a tabela de checklists do período */}
+
+## Consultar um período
+
+<Steps>
+  <Step title="Abra a aba Histórico">
+    Em **Checklist**, mude da aba **Hoje** para **Histórico**. Ele já abre com os **últimos 7 dias**.
+  </Step>
+  <Step title="Escolha a equipe">
+    Somente para supervisão e administrador. Membros de equipe veem sempre a própria equipe — a plataforma não permite consultar outra.
+  </Step>
+  <Step title="Defina o intervalo em De e Até">
+    Qualquer período.
+  </Step>
+  <Step title="Clique em Aplicar">
+    A tabela é montada com os checklists do intervalo.
+  </Step>
+</Steps>
+
+## Lendo a tabela
+
+Cada linha é **um checklist executado em um dia**. Se a equipe tem dois checklists agendados na mesma data, aparecem duas linhas.
+
+| Coluna | O que mostra |
+|---|---|
+| **Checklist** | O nome do checklist. |
+| **Tipo** | Padrão ou Diversificado. |
+| **Situação** | O resultado agregado do dia. |
+| **Data** | O dia executado. |
+| **Concluídos** | Quantos itens de quantos foram marcados (`6/8`). |
+
+### As três situações
+
+| Situação | Quando aparece |
+|---|---|
+| **Concluído** (verde) | Todos os itens do dia foram marcados. |
+| **Pendente** (amarelo) | Parte foi feita, ou há itens com justificativa. |
+| **Não iniciado** (cinza) | Nenhum item foi marcado e nenhum foi justificado — o dia passou sem registro. |
+
+Clique em uma linha para ver **item por item**: a descrição, quem marcou, o horário e as observações ou justificativas.
+
+Você pode ordenar por checklist e por data, e filtrar por nome e por tipo direto nos cabeçalhos da tabela.
+
+## Os indicadores do período
+
+O relatório traz quatro números. Cada um tem um ícone **i** ao lado com a explicação — é o mesmo texto reproduzido na legenda do PDF, para o número nunca ser interpretado de duas formas diferentes.
+
+| Indicador | O que conta |
+|---|---|
+| **Esperados** | Check-ins previstos: itens ativos × dias agendados de cada checklist. |
+| **Concluídos** | Check-ins efetivamente marcados no período. |
+| **Justificados** | Itens **não** realizados em que a equipe registrou o motivo. |
+| **Não iniciados** | Itens sem nenhum registro no dia — nem conclusão, nem justificativa. |
+| **Taxa de conclusão** | Concluídos ÷ Esperados, limitada a 100%. |
+
+<Tip>
+  A leitura mais útil é a relação entre **Justificados** e **Não iniciados**. Muitos justificados indicam impedimentos reais a resolver. Muitos não iniciados indicam que o checklist não está sendo executado.
+</Tip>
+
+## Exportar em PDF
+
+Quem gerencia checklists tem o botão **Exportar PDF** na barra de filtros. O arquivo sai com o nome `relatorio-checklists.pdf` e traz os indicadores do período, a legenda de cada número e a lista completa de itens.
+
+<Note>
+  O botão exporta exatamente o período e a equipe que estão filtrados na tela.
+</Note>
+
+## Voltar a um dia específico
+
+Na gestão de checklists, o histórico de datas agendadas tem a ação **Acessar**: ela leva você direto para a aba **Hoje** posicionada naquela data e naquela equipe, pronta para lançar o que ficou faltando.
+
+## Atualização em tempo real
+
+O histórico se atualiza sozinho enquanto a equipe marca itens dentro do período consultado — não é preciso clicar em Aplicar de novo para ver o número mudar.

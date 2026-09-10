@@ -1,7 +1,22 @@
-# Mintlify automatically ignores these files and directories:
+# Mintlify já ignora automaticamente:
 # .git, .github, .claude, .agents, .idea, node_modules,
 # README.md, LICENSE.md, CHANGELOG.md, CONTRIBUTING.md
 
-# Draft content
+# Rascunhos
 drafts/
 *.draft.mdx
+
+# ---------------------------------------------------------------
+# Conteúdo antigo do template (inglês, gerado automaticamente).
+# Não descreve o sistema real — mantido fora do build até ser apagado.
+# Para remover de vez:
+#   git rm -r concepts configuration getting-started guides help \
+#             introduction.mdx quickstart.mdx logo/light.svg logo/dark.svg
+# ---------------------------------------------------------------
+concepts/
+configuration/
+getting-started/
+guides/
+help/
+introduction.mdx
+quickstart.mdx

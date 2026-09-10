@@ -1,81 +1,103 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
-  "name": "Resolve",
+  "theme": "aspen",
+  "name": "Resolve Já",
+  "description": "Guia da plataforma Resolve Já — abertura e acompanhamento de chamados de infraestrutura, atendimento no quadro e execução de checklists.",
   "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
-    "dark": "#4fa1ab"
+    "primary": "#2563EB",
+    "light": "#3B82F6",
+    "dark": "#1D4ED8"
   },
   "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentation",
+        "tab": "Comece aqui",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Visão geral",
             "pages": [
-              "introduction",
-              "quickstart",
-              "getting-started/account-setup"
+              "index",
+              "comecar/como-funciona",
+              "comecar/perfis-e-acessos"
             ]
           },
           {
-            "group": "Core Concepts",
+            "group": "Primeiros passos",
             "pages": [
-              "concepts/tickets",
-              "concepts/kanban-board",
-              "concepts/notifications"
+              "comecar/criar-conta",
+              "comecar/entrar",
+              "comecar/aplicativo"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Guia da plataforma",
+        "groups": [
+          {
+            "group": "Chamados",
+            "pages": [
+              "chamados/abrir-chamado",
+              "chamados/acompanhar-chamado",
+              "chamados/avaliar-atendimento"
             ]
           },
           {
-            "group": "Guides",
+            "group": "Atendimento",
             "pages": [
-              "guides/creating-tickets",
-              "guides/managing-tickets",
-              "guides/kanban-workflows",
-              "guides/notifications-setup",
-              "guides/team-collaboration"
+              "atendimento/quadro-de-chamados",
+              "atendimento/pegar-chamado",
+              "atendimento/espera-e-abandono",
+              "atendimento/concluir-chamado",
+              "atendimento/reabrir-chamado"
             ]
           },
           {
-            "group": "Configuration",
+            "group": "Checklists",
             "pages": [
-              "configuration/board-settings",
-              "configuration/notification-rules",
-              "configuration/user-roles"
+              "checklists/executar-checklist",
+              "checklists/historico-de-checklists"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Ajuda",
+        "groups": [
           {
-            "group": "Help",
+            "group": "Ajuda",
             "pages": [
-              "help/faq",
-              "help/troubleshooting"
+              "ajuda/notificacoes",
+              "ajuda/duvidas-frequentes",
+              "ajuda/problemas-comuns",
+              "ajuda/suporte"
             ]
           }
         ]
       }
     ]
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:support@resolve.io"
+        "label": "Suporte",
+        "href": "/ajuda/suporte"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Open App",
-      "href": "https://app.resolve.io"
+      "label": "Acessar plataforma",
+      "href": "https://resolveja.dimeexperience.com.br"
     }
   },
   "footer": {
-    "socials": {}
+    "socials": {
+      "github": "https://github.com/vitorlohan/chamado-patrimonio"
+    }
   }
 }

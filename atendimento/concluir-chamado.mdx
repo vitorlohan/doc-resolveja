@@ -1,0 +1,109 @@
+---
+title: "Concluir um chamado com registro da resolução"
+sidebarTitle: "Concluir chamado"
+description: "O que é obrigatório para finalizar um atendimento: quem atendeu, a observação do que foi feito e a foto do problema resolvido."
+---
+
+Concluir é o último passo do atendimento. A plataforma exige o registro do que foi feito — não é possível fechar um chamado apenas marcando como pronto.
+
+{/* SCREENSHOT: modal "Concluir chamado" preenchido, com a foto anexada */}
+
+## O que é obrigatório
+
+<Warning>
+  Os quatro campos são obrigatórios. Se faltar qualquer um, a conclusão não é enviada.
+</Warning>
+
+| Campo | O que informar |
+|---|---|
+| **Prioridade** | Já vem preenchida com a que foi definida ao pegar o chamado. |
+| **Atendido por** | Quem executou o serviço. Já vem com o seu nome. |
+| **Observação** | O que foi feito para resolver o problema. |
+| **Foto do problema resolvido** | Uma imagem comprovando a resolução. |
+
+## Passo a passo
+
+<Steps>
+  <Step title="Clique em Concluir">
+    O botão está no card, no quadro, e dentro do detalhe do chamado.
+  </Step>
+  <Step title="Confira a prioridade e quem atendeu">
+    Para membros de equipe, os dois campos vêm **travados** com os valores corretos — você não precisa (nem pode) alterá-los.
+
+    Quem supervisiona pode escolher outra prioridade e outro membro, para o caso de o serviço ter sido executado por outra pessoa.
+  </Step>
+  <Step title="Escreva a observação">
+    Descreva **o que foi feito**, não apenas que foi resolvido. Essa observação vira um comentário permanente no chamado e é o que a gestão lê depois.
+
+    Bom: `Reator queimado substituído por um novo, de 2x32W. Testado e funcionando.`
+
+    Ruim: `Resolvido.`
+
+    <Tip>
+      Se você trocou uma peça, registre qual. Se o problema pode voltar, registre isso também. Esse texto é a memória do que aconteceu no local.
+    </Tip>
+  </Step>
+  <Step title="Anexe a foto da resolução">
+    Uma imagem, de até 5 MB. No celular, a câmera abre direto — o ideal é fotografar no local, logo depois de terminar.
+
+    A foto fica destacada no chamado, em uma seção própria chamada **Foto da resolução**, separada das imagens do problema.
+  </Step>
+  <Step title="Clique em Concluir chamado">
+    Pronto. O chamado vai para a coluna **Concluído**.
+  </Step>
+</Steps>
+
+## O que acontece ao concluir
+
+<Steps>
+  <Step title="O chamado é fechado">
+    Status **Concluído**, com data e hora de fechamento registradas.
+  </Step>
+  <Step title="O tempo total é congelado">
+    O tempo em aberto para de contar e passa a valer para os relatórios. Ele considera apenas os períodos em que o chamado esteve fora de concluído — reaberturas não inflam o número.
+  </Step>
+  <Step title="A observação vira comentário">
+    O texto que você escreveu entra na lista de comentários, com o seu nome.
+  </Step>
+  <Step title="A foto é anexada como resolução">
+    Ela fica marcada como foto de resolução, e não se mistura com as imagens do problema.
+  </Step>
+  <Step title="O solicitante é avisado e recebe o link de avaliação">
+    Ele recebe **e-mail** e **WhatsApp** com o aviso de conclusão e um link para dar a nota de 1 a 5 estrelas.
+  </Step>
+  <Step title="A gestão recebe o resumo">
+    Com o tempo total que o chamado levou.
+  </Step>
+</Steps>
+
+## Depois de concluído
+
+<Warning>
+  Chamado concluído fica **bloqueado para edição**. Membros de equipe não conseguem mais comentar, alterar campos nem reabrir. A mensagem na tela é: *Chamado concluído. Edição bloqueada — somente um administrador pode reabri-lo.*
+</Warning>
+
+Se o problema voltou ou o serviço ficou incompleto, o caminho é a **reabertura**, feita por quem supervisiona.
+
+<Card title="Reabrir um chamado" icon="rotate-left" href="/atendimento/reabrir-chamado">
+  Como um chamado concluído volta para o atendimento.
+</Card>
+
+## Erros ao concluir
+
+<AccordionGroup>
+  <Accordion title="Selecione a prioridade">
+    O campo ficou vazio. Chamados antigos, criados antes de a prioridade existir, podem chegar sem ela — nesse caso, peça a quem supervisiona para definir.
+  </Accordion>
+  <Accordion title="Selecione quem atendeu o chamado">
+    Falta escolher o membro. Acontece para quem supervisiona, que precisa selecionar manualmente.
+  </Accordion>
+  <Accordion title="Descreva a observação da resolução">
+    O campo de observação está vazio. Não há como concluir sem descrever o que foi feito.
+  </Accordion>
+  <Accordion title="Anexe uma foto do problema resolvido">
+    A foto é obrigatória. Se a imagem não aparece depois de selecionada, ela pode ter passado de 5 MB e sido descartada — tire outra ou escolha uma menor.
+  </Accordion>
+  <Accordion title="Este chamado já está concluído">
+    Alguém concluiu o chamado enquanto a sua tela estava aberta. Feche e atualize o quadro.
+  </Accordion>
+</AccordionGroup>
